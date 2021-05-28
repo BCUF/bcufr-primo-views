@@ -1,0 +1,12 @@
+<div class="fees">
+    <div class="courier-info bar alert-bar">
+        <h4>{{$ctrl.bcuConfigService.getLabel($ctrl.config, 'title')}}</h4>
+        <p ng-bind-html="$ctrl.bcuConfigService.getLabel($ctrl.config,'service')"></p>
+        <p><a href="{{::$ctrl.bcuConfigService.getLabel($ctrl.config, 'href')}}" target="_blank">{{$ctrl.bcuConfigService.getLabel($ctrl.config, 'link')}}</a></p>
+        <p ng-if="$ctrl.service=='request'">Bestellung (magazin oder Kurier)</p>
+        <p ng-if="$ctrl.service=='partial'">Bestellung Digitalisierung</p>
+<!--        <p ng-if="$ctrl.service=='illCopy'">Fernleihe Kopien</p>
+        <p ng-if="$ctrl.service=='illBook'">Fernleihe Publikation</p>-->
+        <p>{{$ctrl.bcuConfigService.getLabel($ctrl.config, $ctrl.service)}}</p>
+    </div>
+</div>

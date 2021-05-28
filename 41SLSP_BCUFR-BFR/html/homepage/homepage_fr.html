@@ -1,0 +1,88 @@
+<md-content>
+    <div>
+        <div class="ps_content md-padding" layout-gt-sm="row" layout-align="start start">
+            <div flex-xl="25" flex-md="0" flex-lg="20" flex="0"></div>
+            <div layout="column" flex-xl="50" flex-sm="100" flex-md="75" flex-lg="55" flex="100">
+                <md-card class="default-card">
+                    <md-card-title>
+                        <md-card-title-text>
+                              <h1 class="md-headline">Bibliographie fribourgeoise</h1>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content>
+                        <p>
+                            La Bibliographie fribourgeoise répertorie les documents imprimés et audiovisuels à thématique fribourgeoise, ainsi que les publications littéraires, musicales et artistiques d’auteur&middot;e&middot;s fribourgeois. Extraite de <a href="https://bcufr.swisscovery.slsp.ch/discovery/search?vid=41SLSP_BCUFR:DFR&lang=fr" target="_blank" rel="external" class="arrow-link">Discovery Fribourg-Freiburg<prm-icon external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon></a> et quotidiennement mise à jour, elle contient quelque 50'000 références. Un plan de classement complète les possibilités de recherche habituelles.
+                        </p>
+                        <p>
+                            Les auteur&middot;e&middot;s et le public sont cordialement invités à nous signaler des documents intéressants qui n’y figureraient pas encore.
+                        </p>
+                    </md-card-content>
+                </md-card>
+                <md-card class="default-card">
+                    <md-card-title class="collapsible" ng-click="ctrl.$showJournals = !ctrl.$showJournals">
+                        <md-card-title-text>
+                            <h2 class="md-headline">Liste des périodiques dépouillés annuellement</h2>
+                        </md-card-title-text>
+                        <md-icon ng-class="{'toggled' : ctrl.$showJournals}"><svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                          </svg></md-icon>
+                    </md-card-title>
+                    <md-card-content class="ng-hide" ng-show="ctrl.$showJournals"  aria-hidden="true">
+                        <ul>
+                            <li>Annales fribourgeoises</li>
+                            <li>Bulletin de la Société fribourgeoise des sciences naturelles</li>
+                            <li>Bulletin / Institut fribourgeois d'héraldique et de généalogie</li>
+                            <li>Cahiers d'archéologie fribourgeoise = Freiburger Hefte für Archäologie</li>
+                            <li>Cahiers du Musée gruérien</li>
+                            <li>Freiburger Geschichtsblätter</li>
+                            <li>Freiburger Volkskalender</li>
+                            <li>Passé simple : mensuel romand d'histoire et d'archéologie</li>
+                            <li>Patrimoine fribourgeois = Freiburger Kulturgüter</li>
+                        </ul>
+                    </md-card-content>
+                </md-card>
+                <md-card class="default-card">
+                    <md-card-title class="collapsible" ng-click="ctrl.$showClassification = !ctrl.$showClassification">
+                        <md-card-title-text>
+                            <h2 class="md-headline">Plan de classement</h2>
+                        </md-card-title-text>
+                        <md-icon ng-class="{'toggled' : ctrl.$showClassification}"><svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                          </svg></md-icon>
+                    </md-card-title>
+                    <md-card-content class="ng-hide" ng-show="!ctrl.$showClassification" aria-hidden="false">
+                        <div ng-controller="bcuTreeController">
+                           <bcu-node-component tree="data"></bcu-node-component>
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+            
+
+        </div>
+</md-content>
+
+<md-content id="footer">
+    <div layout="row" flex="100">
+        <div flex-xl="25" flex-md="0" flex-lg="20" flex="0"></div>
+        <div layout="column" flex-xl="50" flex-sm="100" flex-md="75" flex-lg="55" flex="100">
+        <md-card class="prm-primary-bg psfooter" flex layout-gt-sm="row" layout-align="space-around start">
+            <md-card-content class="prm-primary-bg">
+                <p>Bibliothèque cantonale et universitaire<br>
+                Rue de la Carrière 22<br>
+                Case postale<br>
+                1701 Fribourg<br>
+                <a href="mailto:bcu-bf@fr.ch">bcu-bf@fr.ch</a></p>
+            </md-card-content>
+            <md-card-content class="prm-primary-bg">
+                <md-button><a href="https://www.fr.ch/fr" target="_blank" class="ps_link md-button"><img src="custom/41SLSP_BCUFR-BFR/img/logo-fr_15.png" alt="Etat de Fribourg"/> Etat de Fribourg</a></md-button><br>
+                <md-button><a href="https://slsp.ch/fr" target="_blank" class="ps_link md-button"><img src="custom/41SLSP_BCUFR-BFR/img/logo-slsp_15.png" alt="SLSP"/> Swiss Library Service Platform (SLSP)</a></md-button><br>
+                <md-button><a href="https://slsp.ch/fr/dataprotection" target="_blank" class="ps_link md-button">Protection des données SLSP</a></md-button>
+            </md-card-content>
+        </md-card>
+        </div>
+    </div>
+</md-content>
+

@@ -1,0 +1,76 @@
+/* bcu-lib-info */
+
+prm-location-items-after {
+    display: block;
+}
+
+bcu-lib-info-component button.md-button.libinfo,
+bcu-lib-info-component button.md-button.libinfo:focus {
+    padding-left: 1em;
+    height: 30px;
+    color:  $white;
+    background-color: $link;
+    border: 1px solid  $link;
+    margin-left: 0;
+}
+
+bcu-lib-info-component button.md-button.libinfo:hover {
+    background-color: transparent;
+    color: $link;
+}
+
+bcu-lib-info-component button.md-button.libinfo svg {
+    height: 20px;
+}
+
+bcu-lib-info-component div#libinfo {
+    background-color: white;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 0px 0px, rgba(0, 0, 0, 0.07) 0px 5px 5px -3px;
+    margin-bottom: 5px;
+}
+
+bcu-lib-info-component div#libinfo .day {
+    display: inline-block;
+    width: 80px;
+}
+
+bcu-lib-info-component div#libinfo .opening {
+    display: inline-block;
+    width: 120px;
+}
+
+bcu-lib-info-component div#libinfo button {
+    width: 90%;
+    margin-left: 0;
+    margin-top: 0;
+    color: #fff !important;
+    cursor: default;
+}
+
+bcu-lib-info-component button.md-button.button-confirm,
+bcu-lib-info-component button.md-button.button-confirm:hover:not([disabled]) {
+    background-color: #0f7d00;
+}
+
+bcu-lib-info-component button.md-button.button-notice,
+bcu-lib-info-component button.md-button.button-notice:hover:not([disabled]) {
+    background-color:#b84d00;
+}
+
+bcu-lib-info-component div#libinfo .openings {
+    margin: 6px 0;
+}
+
+bcu-lib-info-component div#libinfo .openings p {
+    margin: 0;
+}
+
+bcu-lib-info-component div#libinfo img {
+    height: 100%;
+    width: 100%;
+}
+
+bcu-lib-info-component svg {
+    height: 11px;
+}

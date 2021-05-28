@@ -1,0 +1,17 @@
+<div ng-if="display" class="search-engine">
+    <div ng-hide="$ctrl.parentCtrl.facetGroup.facetGroupCollapsed">
+        <div class="section-content animate-max-height-variable">
+            <div class="md-chips md-chips-wrap">
+               <div ng-repeat="target in targets" aria-live="polite" class="md-chip animate-opacity-and-scale facet-element-marker-local4">
+                    <div class="md-chip-content layout-row" role="button" tabindex="0">
+                      <strong dir="auto" title="{{ target.name }}">
+                           <a ng-href="{{ target.url + target.mapping(queries, filters) }}" target="_blank">
+                               <img ng-src="custom/{{vid}}/img/{{ target.img }}" width="22" height="22" alt="{{ target.alt }}" style="vertical-align:middle;"> {{ target.name }}
+                           </a>
+                         </strong>
+                     </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>

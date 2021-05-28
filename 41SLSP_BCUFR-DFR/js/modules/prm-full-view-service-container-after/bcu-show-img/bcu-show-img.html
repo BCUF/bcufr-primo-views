@@ -1,0 +1,30 @@
+<div class="full-view-section-content" ng-if="$ctrl.images.length">
+  <section ng-if="$ctrl.images.length > 1" class="carousel" aria-label="Gallery">
+    <div class="carousel__viewport">
+      <div class="carousel__slide" ng-repeat="(key, link) in $ctrl.images" id="slide{{key+1}}">
+        <img ng-src="{{link}}">
+        <md-button ng-click="$ctrl.show(key)" aria-label="Commande / Bestellung">
+          <md-tooltip class="bcu-img" md-direction="left">Commande / Bestellung &gt;&gt;&gt;</md-tooltip>
+          <prm-icon  icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>
+        </md-button>
+        <div class="carousel__snapper">
+          <a ng-href="#slide{{key}}" ng-if="key > 0" class="carousel__prev">Go to previous slide</a>
+          <a ng-href="#slide{{$ctrl.images.length}}" ng-if="key == 0" class="carousel__prev">Go to last slide</a>
+          <a ng-href="#slide{{key+2}}" ng-if="key < $ctrl.images.length-1" class="carousel__next">Go to next slide</a>
+          <a href="#slide1" ng-if="key == $ctrl.images.length-1" class="carousel__next">Go to first slide</a>
+        </div>
+      </div>
+    </div>
+    <aside class="carousel__navigation">
+      <div class="carousel__navigation-list">
+        <div ng-repeat="(key, link) in $ctrl.images" class="carousel__navigation-item">
+          <a ng-href="#slide{{key+1}}" class="carousel__navigation-button">Go to slide {{key+1}}</a>
+        </div>
+    </aside>
+  </section>
+  <img ng-if="$ctrl.images.length < 2" ng-src="{{$ctrl.images[0]}}" ng-class="{affiche:$ctrl.images[0].includes('ccsa.admin.ch')}">
+  <md-button ng-if="$ctrl.images.length < 2 && $ctrl.images[0].includes('resolver.bcu-fribourg.ch')" ng-click="$ctrl.show(0)" aria-label="Commande / Bestellung">
+    <md-tooltip class="bcu-img" md-direction="left">Commande / Bestellung &gt;&gt;&gt;</md-tooltip>
+    <prm-icon icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>
+  </md-button>
+</div>

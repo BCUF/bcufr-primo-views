@@ -1,0 +1,16 @@
+<div  class="bcu-topbar" layout="row" ng-if="$ctrl.alert.length > 0">
+    <div class="bcu-topbar-content">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="m 59.36972,49.890188 c 1.794528,3.110534 -0.458011,6.99875 -4.042203,6.99875 H 8.6719433 c -3.5910962,0 -5.8332345,-3.894244 -4.0422073,-6.99875 L 27.957813,9.4429425 c 1.795403,-3.1119921 6.292222,-3.1063533 8.084415,0 z M 32.000021,41.527797 c -2.46993,0 -4.472221,2.002295 -4.472221,4.472231 0,2.469936 2.002291,4.472231 4.472221,4.472231 2.46993,0 4.47222,-2.002295 4.47222,-4.472231 0,-2.469936 -2.00229,-4.472231 -4.47222,-4.472231 z m -4.245985,-16.075338 0.721195,13.222249 c 0.03373,0.618723 0.545319,1.103086 1.164915,1.103086 h 4.719749 c 0.619597,0 1.13118,-0.484363 1.164917,-1.103086 l 0.721194,-13.222249 c 0.03646,-0.668305 -0.495639,-1.230251 -1.164917,-1.230251 h -6.162234 c -0.669277,0 -1.201277,0.561946 -1.164819,1.230251 z"/>
+        </svg>
+        <p ng-repeat="alert in $ctrl.alert" ng-bind-html="alert.alert"></p>
+    </div>
+    <md-button aria-label="{{::('nui.message.dismiss' | translate)}}" (click)="$ctrl.onClose()" class="dismiss-alert-button zero-margin button-with-icon">
+        <prm-icon aria-label="{{::('nui.message.dismiss' | translate)}}"
+                    icon-type="svg"
+                    svg-icon-set="navigation"
+                    icon-definition="ic_close_24px">
+        </prm-icon>
+        <span class="dismiss-alert-button__text" translate="nui.message.dismiss"></span>
+    </md-button>
+</div>

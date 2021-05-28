@@ -1,0 +1,91 @@
+/*** user account ***/
+prm-account > md-toolbar > div.md-toolbar-tools > div {
+    max-width: 0px !important;
+}
+button#backtosearch {
+    margin-left: 0px;
+}
+@media(min-width:1280px) and (max-width: 1709px) {
+    button#backtosearch {
+        margin-left: 250px;
+    }
+}
+@media(min-width:1710px) {
+    button#backtosearch {
+        margin-left: 300px;
+    }
+    prm-account prm-topbar .top-nav-bar {
+        height: 77px;
+    }
+}
+
+#personalDetails > md-card-content > div {
+    flex-flow: column;
+}
+    
+#prm_contact\.address_1 {
+    width: 400px;
+}
+
+prm-account-overview .main-institution-list md-list-item {
+    border: 1px solid transparent;
+}
+
+prm-account-overview .institutions-list md-list-item.is-selected h3.institution-name {
+    font-weight: normal;
+    color: inherit;
+}
+
+prm-account-overview .institutions-list md-list-item.is-selected,
+prm-account-overview .institutions-list md-list-item.is-selected:focus{
+    border: solid 1px $link;
+}
+
+prm-account-overview .institutions-list md-list-item.is-selected h3.institution-name,
+prm-account-overview .institutions-list md-list-item.is-selected h3.institution-name:focus {
+    font-weight: normal;
+    color: $link !important;
+    background-color: transparent;
+}
+
+prm-account-overview .main-institution-list md-list-item:hover,
+prm-account-overview .institutions-list md-list-item.is-selected:hover
+{
+    background-color: $link !important;
+    border: 1px solid $link;
+    color: white;
+}
+
+prm-account-overview .main-institution-list md-list-item .md-button:hover:not([disabled]),
+prm-account-overview .institutions-list md-list-item.is-selected:hover h3.institution-name {
+    color: white !important;
+    background-color: transparent;
+}
+
+prm-account-overview .main-institution-list md-list-item .md-button:focus:not([disabled]),
+rm-account-overview .institutions-list md-list-item.is-selected h3.institution-name:focus {
+    color: inherit !important;
+    background-color: transparent;
+}
+
+prm-account-overview .main-institution-list md-list-item prm-icon md-icon.md-primoExplore-theme {
+    color: $link !important;
+    padding-right: 1em !important;
+    width: 3em;
+}
+
+prm-account-overview .main-institution-list md-list-item:hover prm-icon md-icon.md-primoExplore-theme {
+    color: white !important;
+}
+
+prm-account-overview > md-content > md-tabs md-tabs-canvas md-tab-item {
+    text-overflow: unset !important;
+}
+.message-with-icon prm-icon.giant-icon.bg-icon, .tiles-grid prm-icon.giant-icon.bg-icon {
+    color: $alert;
+    opacity: unset;
+}
+
+prm-requests .in-element-dialog form > div {
+    background-color: white;
+} 

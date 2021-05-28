@@ -1,0 +1,6 @@
+<div ng-if="$ctrl.feedbackLink" layout="row" class="bcu-online-feedback-mail" layout="row">
+    <a href="{{$ctrl.feedbackLink}}">
+        <prm-icon external-link icon-type="svg" aria-label="mail" svg-icon-set="primo-ui" icon-definition="envelope-outline"></prm-icon>
+        <span>{{::$ctrl.bcuConfigService.getLabel($ctrl.config, 'linkText')}}</span>
+    </a>
+</div>

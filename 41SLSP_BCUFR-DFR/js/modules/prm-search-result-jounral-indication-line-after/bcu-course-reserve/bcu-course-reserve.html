@@ -1,0 +1,12 @@
+<div class="badges layout-align-start-start layout-row badges prm-course" ng-repeat="course in $ctrl.courses">
+    <div ng-click="$ctrl.showCourse(course.id)" layout="flex" class="layout-row badge-item">
+        <prm-icon class="badge-icon" icon-type="{&quot;type&quot;:&quot;svg&quot;,&quot;iconSet&quot;:&quot;primo-ui&quot;,&quot;icon&quot;:&quot;mdi-teach&quot;}" svg-icon-set="primo-ui" icon-definition="mdi-teach"></prm-icon>
+        <button class="neutralized-button arrow-link-button md-button">
+            <span class="button-content">
+                <span class="available_in_library ">{{::$ctrl.bcuConfigService.getLabel($ctrl.config, 'label')}}&nbsp;</span>
+                <span>{{course.id}} - {{course.course}}</span><span ng-if="course.teachers"> ({{course.teachers}})</span>
+            </span>
+            <prm-icon link-arrow="" icon-type="svg" svg-icon-set="primo-ui" icon-definition="chevron-right" [display-mode]="::$ctrl.displayMode"></prm-icon>
+        </button>
+    </div>
+</div>

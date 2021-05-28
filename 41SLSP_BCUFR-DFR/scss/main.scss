@@ -1,0 +1,1503 @@
+
+
+/* components */
+
+div[ng-if="::$ctrl.isCourseDocument()"] {
+    display: none !important;
+}
+
+bcu-course-reserve .badges {
+    line-height: 1.2em;
+    padding: unset;
+}
+bcu-course-reserve .badges:nth-child(1) {
+    margin-top: -.5em;
+}
+bcu-course-reserve .badges .badge-item .badge-icon {
+    display: unset;
+    margin-top: 2px;
+}
+
+bcu-course-reserve .badges .badge-item{
+    align-items: unset;
+}
+/*
+bcu-show-img-component .full-view-section-content md-card{
+    margin-left: 2em;
+}
+*/
+bcu-show-img img {
+    width: 100%;
+}
+
+bcu-show-img img.affiche {
+    width: unset;
+    padding: .5em;
+}
+
+bcu-show-img .md-button {
+    height: 4em;
+    min-width: 4em;
+    width: 4em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    padding: .5em;
+    background-color: rgba(51, 51, 51, .75);
+    border-radius: 1em;
+    color: white !important;
+    cursor: pointer;
+    z-index: 2;
+}
+
+bcu-show-img .md-button:hover:not([disabled]) {
+    background-color: gray;
+}
+
+.bcu-img {
+    font-size: 15px !important;
+    font-weight: bold;
+}
+
+bcu-show-img prm-icon md-icon {
+    height: 3em;
+    width: 3em;
+}
+
+@keyframes tonext {
+75% {
+left: 0;
+}
+95% {
+left: 100%;
+}
+98% {
+left: 100%;
+}
+99% {
+left: 0;
+}
+}
+
+@keyframes tostart {
+75% {
+left: 0;
+}
+95% {
+left: -300%;
+}
+98% {
+left: -300%;
+}
+99% {
+left: 0;
+}
+}
+
+@keyframes snap {
+96% {
+scroll-snap-align: center;
+}
+97% {
+scroll-snap-align: none;
+}
+99% {
+scroll-snap-align: none;
+}
+100% {
+scroll-snap-align: center;
+}
+}
+/*
+bcu-show-img-component {
+max-width: 37.5rem;
+margin: 0 auto;
+padding: 0 1.25rem;
+font-family: 'Lato', sans-serif;
+}
+*/
+/*
+bcu-show-img-component {
+box-sizing: border-box;
+scrollbar-color: transparent transparent; /* thumb and track color *//*
+scrollbar-width: 0px;
+}
+*/
+bcu-show-img::-webkit-scrollbar {
+width: 0;
+}
+
+bcu-show-img::-webkit-scrollbar-track {
+background: transparent;
+}
+
+bcu-show-img::-webkit-scrollbar-thumb {
+background: transparent;
+border: none;
+}
+
+bcu-show-img {
+-ms-overflow-style: none;
+}
+
+bcu-show-img ol, bcu-show-img li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+bcu-show-img.full-view-section {
+    margin-top: unset;
+    display: block;
+}
+
+bcu-show-img .full-view-section-content {
+    text-align: center;
+}
+
+.carousel {
+position: relative;
+padding-top: 100%;
+perspective: 100px;
+}
+
+.carousel__viewport {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display: flex;
+overflow: hidden;
+counter-reset: item;
+scroll-behavior: smooth;
+scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+position: relative;
+flex: 0 0 100%;
+width: 100%;
+background-color: white;
+counter-increment: item;
+}
+/*
+.carousel__slide:nth-child(even) {
+background-color: #99f;
+}
+
+.carousel__slide:before {
+content: counter(item);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate3d(-50%,-40%,70px);
+color: #fff;
+font-size: 2em;
+}
+*/
+
+.carousel__snapper {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+.carousel__snapper {
+animation-name: tonext, snap;
+animation-timing-function: ease;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+}
+
+.carousel__slide:last-child .carousel__snapper {
+animation-name: tostart, snap;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.carousel__snapper {
+animation-name: none;
+}
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+animation-name: none;
+}
+.carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 0.5em;
+  }
+  
+  .carousel__navigation-list,
+  .carousel__navigation-item {
+    display: inline-block;
+  }
+  
+  .carousel__navigation-button {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: $topcolor;
+    background-clip: content-box;
+    border: 2px solid white;
+    font-size: 0;
+    transition: transform 0.1s;
+    content: counter(item);
+    color: white;
+    margin: .5rem;
+  }
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 0;
+  margin-top: 50%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  font-size: 0;
+  outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+  left: 0;
+}
+
+.carousel::after,
+.carousel__next {
+  right: 0;
+}
+
+.carousel__next:hover, .carousel__prev:hover {
+    box-shadow: unset;
+}
+.carousel::before,
+.carousel::after {
+  content: '';
+  z-index: 1;
+  background-color: rgba(51,51,51,0.85);
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  pointer-events: none;
+}
+
+.carousel::before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.carousel::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.bcu-topbar{
+    background-color: $error;
+    color: #000;
+    height: 40px;
+ }
+.bcu-topbar svg{
+     margin-right: 0.3em;
+     flex:0 0 24px;
+}
+.bcu-topbar-content{
+     flex: 1 1;
+     display: flex;
+     align-items: center;
+     padding: 0.5em 1em 0.5em 0;
+     border-right: solid 1px rgba(58,58,58,.2);
+}
+.bcu-topbar-content p {
+    margin: 0 1em;
+}
+
+.bcu-topbar-content svg{
+    margin : 0 1em;
+    flex: 0 0 20px;
+    height: 20px;
+    width: 20px;
+}
+.bcu-topbar a{
+    color: #0060b1;
+    font-weight: bold;
+}
+.bcu-topbar .md-button.button-with-icon>prm-icon md-icon, .bcu-topbar .md-button.button-with-icon>prm-icon+span{
+color: #000!important;
+}
+.bcu-topbar .dismiss-alert-button{
+    color: #000!important;
+    flex: 0 0 36px;
+    min-width: auto;
+}
+.bcu-topbar .md-button.button-with-icon>prm-icon+span{
+    display: none;
+}
+
+@media(min-width: 960px){
+    .bcu-topbar .dismiss-alert-button{
+        flex: 0 0 130px;
+    }
+    .bcu-topbar .md-button.button-with-icon>prm-icon+span{
+        display: inline-block;
+    }
+}
+.bcu-topbar .dismiss-alert-button:hover, .bcu-topbar .dismiss-alert-button:focus{
+    color: #000!important;
+}
+
+/*    Hide "search inside" for print journals */
+.search-within-p-only {
+    display:none 
+}
+
+.fees.bar.alert-bar {
+    background-color: $error;
+    border: none;
+    height: auto;
+    margin: 6px 8px;
+    padding: .5em .5em 0.25em;
+    text-align: center;
+}
+
+.fees.bar.alert-bar.intern {
+    background-color: silver
+}
+
+.fees.bar.alert-bar.holding {
+    background-color: $green
+}
+
+.fees.bar.alert-bar h3 {
+    margin-top: 0.6em;
+}
+
+prm-request button.button-confirm,
+prm-request .md-button.button-confirm:focus:not([disabled]) {
+    color: white !important;
+    border: 1px solid $link !important;
+    background-color:  $link;
+    width: 100%;
+}
+
+prm-request button.button-confirm:hover:not([disabled]) {
+    color: $link !important;
+}
+
+prm-request button.button-secondary,
+prm-request button.md-button {
+    border: 1px solid #aaa;
+}
+prm-request button.button-secondary:hover,
+prm-request button.md-button:hover {
+    border: 1px solid #eee;
+    background-color: #eee !important;
+}
+
+prm-request button.md-button.md-datepicker-button,
+prm-request button.md-button.md-datepicker-triangle-button {
+    border:none;
+}
+
+prm-request button.md-button.md-datepicker-button:hover,
+prm-request button.md-button.md-datepicker-triangle-button:hover {
+    background-color: transparent !important;
+    border:none;
+}
+
+.bcu-fullview-offcampus {
+    margin-top: 1em;
+    padding: 1em 1em 0.5em;
+    background-color: $alert;
+    color: black;
+    box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 0px 0px, rgba(0, 0, 0, 0.07) 0px 5px 5px -3px
+}
+
+.bcu-fullview-offcampus > div {
+    margin-left: 1em;
+}
+
+.bcu-fullview-offcampus a {
+    color: #0030a0;
+}
+
+.bar.error-bar {
+    background-color:  $error;
+    color: #000;
+}
+
+.bar.success-bar {
+    background-color: $green;
+    border-color: transparent;
+    color: #000;
+}
+.button-as-link.md-button,
+.button-as-link.md-button:hover {
+    border: 1px solid #53738c;
+}
+
+prm-alma-other-members md-tabs.section-content,
+prm-alma-other-members md-list-item.md-no-proxy {
+    padding: 0; 
+}
+
+alma-howovp md-list-item button.md-button.neutralized-button, 
+prm-alma-other-members md-list-item button.md-button.neutralized-button {
+    background-color: white;
+    padding: 1em;
+    box-shadow: 0 1px 1px rgba(0,0,0,.3),2px 1px 0 #fff,-3px 3px 10px -3px rgba(0,0,0,.3);
+}
+
+alma-howovp md-list-item button.md-button.neutralized-button > div > div {
+    padding: unset;
+}
+
+alma-howovp .md-button._md-focused:not([disabled]),
+alma-howovp .md-button.hovered:not([disabled]),
+alma-howovp .md-button.md-focused:not([disabled]),
+alma-howovp .md-button:focus:not([disabled]),
+alma-howovp .md-button:hover:not([disabled]),
+prm-alma-vewit-items md-list-item button.md-button.neutralized-button:hover:not([disabled]),
+alma-htgi-tabs md-list-item button.md-button.neutralized-button:hover:not([disabled]) {
+    background-color:$lightgrey;
+}
+
+alma-htgi-tabs md-list-item button.md-button.neutralized-button
+
+/*** top bar ***/
+prm-spinner.half-transparent .diamond {
+    background-color: gray;
+    height: 25px;
+    width: 25px;
+    border: solid 2px white;
+}
+
+prm-topbar .top-nav-bar,
+.advanced-search-backdrop.visible,
+.prm-primary-bg,
+prm-atoz-search-bar,
+prm-browse-search-bar,
+prm-collection-gallery-header .collection-header-inner,
+prm-newspapers-search-bar,
+prm-search-bar,
+prm-spinner.overlay-cover.light-on-dark::after,
+prm-tags-search-bar,
+prm-tree-nav prm-spinner .diamond,
+prm-full-view-cont .header {
+    background-color: $topcolor;
+}
+
+prm-topbar {
+    height: auto;
+}
+prm-topbar .top-nav-bar {
+    min-height: 60px;
+    height: 60px;
+}
+
+prm-topbar prm-logo {
+    z-index: 12;
+}
+
+prm-logo a.md-button {
+    padding: 0;
+}
+
+prm-topbar .md-button:not(.disable-hover):hover:not([disabled]):hover:not([disabled]),
+prm-topbar .md-button:not(.disable-hover):focus:not([disabled]):focus:not([disabled]) {
+    background-color: #a0a0a0 !important;
+    color: #3a3a3a !important;
+}
+
+prm-logo .product-logo {
+    margin-top: 0.5em;
+    height: 128px;
+    padding: 0;
+}
+
+@media(min-width:1280px) and (max-width: 1709px) {
+    prm-logo .product-logo {
+        height: 115px;
+        margin-top: 0.5em;
+        padding: 5px 10px 5px 0px;
+    }
+}
+@media(min-width:600px) and (max-width:1279px) {
+    prm-logo .product-logo {
+        height: 63px;
+        margin-top: 0;
+        padding: 3px;
+    }
+}
+
+@media(max-width: 599px) {
+    prm-logo .product-logo {
+        height: 60px;
+        margin-top: 0;
+        padding: 0px;
+    }
+
+    prm-location-items .separate-list-items .md-list-item-text.layout-wrap.layout-row > .flex-xs-100 {
+        justify-content: flex-start;
+        margin-top: 0.5em;
+        right: auto;
+    } 
+}
+
+@media(min-width:1280px) and (max-width: 1919px) {
+    prm-search-bar .facet-to-left-spacer {
+        -ms-flex: 1 1 20% !important;
+        flex: 1 1 20% !important;
+        max-width: 20% !important;
+        margin-right: 0;
+    }
+
+    prm-search-bar .facet-to-left-search-bar {
+        -ms-flex: 1 1 55% !important;
+        flex: 1 1 55% !important;
+        max-width: 55% !important;
+    }
+}
+
+/* search-bar */
+prm-search-bar {
+    padding-top: unset;
+}
+
+.search-actions button.md-button {
+    width: 50px;
+}
+
+.search-actions button.md-button,
+.search-actions button.md-button:focus:not([disabled]) {
+    border: 1px solid white !important;
+    background-color: $link;
+    color: white;
+}
+
+.search-actions button.md-button#voiceSearchButton {
+    width: 50px;
+    background-color: white !important;
+    color: $link !important;
+}
+
+/* flex-box bug in search field */
+@media (max-width: 959px) and (min-width: 600px) {
+    .search-elements-wrapper .search-input.flex-sm-40 {
+      max-width: 100%;
+    }
+  
+    .search-elements-wrapper .search-options.visible.flex-sm-40 {
+      max-width: 0%;
+    }
+}
+.search-actions {
+    min-width: 50px;
+}
+
+.prm-primary-bg.prm-hue1,
+md-dialog-content md-input-container.dark-on-light:after,
+md-input-container:after,
+prm-atoz-search-bar.prm-hue1,
+prm-browse-search-bar.prm-hue1,
+prm-collection-gallery-header .prm-hue1.collection-header-inner,
+prm-newspapers-search-bar.prm-hue1,
+prm-search-bar.prm-hue1,
+prm-spinner.prm-hue1.overlay-cover.light-on-dark:after,
+prm-tags-search-bar.prm-hue1,
+prm-tree-nav prm-spinner .prm-hue1.diamond {
+   background-color:$link;
+}
+
+/*hide course reserve slot*/
+md-option.md-ink-ripple[value="CourseReserves"],
+ul > [ng-repeat='group in $mdAutocompleteCtrl.matches'] > li:nth-child(3) {
+    display: none;
+}
+
+/* advanced search */
+.advanced-search-backdrop {
+    background-color: $topcolor !important;
+}
+
+prm-search > div > md-content,
+md-card.default-card._md.md-primoExplore-theme {
+    background-color: #fff !important;
+    border-radius: 3px;
+}
+
+#mainMenu > div > a, button#signInBtn, button#more-links-button, prm-topbar > div > prm-user-area-expandable > md-menu > button > span {
+    font-size: small !important;
+    font-weight: 500 !important;
+}
+prm-search-bar .search-switch-buttons .md-button.switch-to-simple, prm-search-bar .search-switch-buttons .md-button.switch-to-advanced  {
+    color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+prm-search-bar .search-switch-buttons .md-button.switch-to-simple:hover, prm-search-bar .search-switch-buttons .md-button.switch-to-advanced:hover {
+    border: 1px solid white;
+    color: white;
+}
+
+/*** facets ***/
+
+prm-facet .sidebar-inner-wrapper {
+    width: 95%;
+    padding: 0;
+}
+
+prm-facet .sidebar-inner-wrapper .button-as-link.md-button {
+    border: 1px solid $link;
+}
+
+prm-facet .sidebar-inner-wrapper prm-breadcrumbs .button-as-link.md-button {
+    padding: 3px;
+    margin-bottom: 2px !important;
+}
+
+prm-facet .sidebar-inner-wrapper prm-breadcrumbs .md-chips .md-chip-content:hover .persistence-button {
+    border: none;
+}
+
+prm-facet .sidebar-section.available-facets {
+    border-bottom: 1px dotted #666666
+}
+
+prm-facet h3.section-title-header {
+    margin: 0;
+}
+
+prm-facet h3.section-title-header:hover,
+
+prm-facet h3.section-title-header:hover span {
+    background-color: #eeeeee;
+    color: #3a3a3a;
+}
+
+prm-facet h3.section-title-header span,
+prm-facet h3.section-title-header .md-primoExplore-theme,
+prm-facet h3.section-title-header .md-primoExplore-theme:hover {
+    color: #3a3a3a !important;
+}
+
+prm-facet .section-title-header button.section-title {
+    margin: 0;
+    line-height: 32px;
+/*    background-color: #ddd; */
+}
+
+prm-facet .section-content {
+    padding-left: 1em;
+}
+
+prm-facet .section-content .md-chips .md-chip.wrapping-chip + .md-chip {
+    margin-top: 0;
+}
+prm-facet .section-content .md-chips .md-chip.wrapping-chip md-checkbox {
+    height: 20px;
+}
+
+prm-facet .section-content .md-chips .md-chip.wrapping-chip strong.facet-title.layout-row {
+    font-weight: normal !important;
+    padding-top: 0;
+    padding-bottom: 3px;
+
+}
+
+prm-facet .section-content .md-chips .md-chip .md-chip-remove-container .md-button {
+    width: 50px;
+}
+
+prm-facet .section-content .md-chips .md-chip .md-chip-remove-container .md-button prm-icon md-icon {
+    height: 24px;
+    width: 24px;
+    min-height: 24px;
+    min-width: 24px;
+}
+
+prm-facet md-checkbox.md-checked ._md-container,
+prm-facet md-checkbox.md-checked .md-container,
+prm-facet md-checkbox.md-checked .md-icon {
+    background-color: $link;
+}
+
+prm-facet .available-facets .section-content .md-chips .md-chip .button-exclude:hover:not([disabled]) {
+    color: $link;
+}
+
+prm-facet .expand-section-button {
+    font-size: .95em;
+    text-align: right;
+    margin-bottom: .3em;
+}
+
+prm-search-result-sort-by md-select-value,
+#favoritesLabels md-select-value {
+    margin-left: .5em;
+    padding-bottom: 3px !important;
+    font-size: 18.4px;
+}
+
+prm-favorites .sidebar .compensate-padding-left {
+    padding: unset;
+}
+
+.available-facets .section-content .md-chips .md-chip .button-exclude._md-focused:not([disabled]),
+.available-facets .section-content .md-chips .md-chip .button-exclude.hovered:not([disabled]),
+.available-facets .section-content .md-chips .md-chip .button-exclude.md-focused:not([disabled]),
+.available-facets .section-content .md-chips .md-chip .button-exclude:focus:not([disabled]),
+.available-facets .section-content .md-chips .md-chip .button-exclude:hover:not([disabled]),
+.available-facets .section-content .md-chips .md-chip .md-button::before {
+    background-color: transparent;
+}
+
+.search-engine > div {
+    margin-bottom: 14px;
+}
+
+.multiselect-submit .md-button:hover {
+    border: solid 1px #3a3a3a
+}
+
+/*** Content ***/
+
+.text-highlight, mark {
+    background-color: #e4e4e4;
+    box-shadow: none;
+}
+
+md-card-title h1 {
+    margin-bottom: 8px;
+}
+
+prm-static.md-padding.flex {
+    min-width: 100%;
+    padding: 0;
+}
+ prm-alert-bar .bar.alert-bar {
+     border: none;
+     height: 40px;
+     
+     background-color: #99cc00;
+ }
+
+ prm-alert-bar .bar.alert-bar .login-error {
+     padding: 1em;
+     background-color: $alert;
+     display: inline-block;
+ }
+
+ @media(min-width: 1256px) {
+    prm-alert-bar .bar.alert-bar {
+        min-height: 40px;
+    }
+ }
+ prm-alert-bar .bar prm-authentication .md-button {
+     color: #000000;
+ }
+
+ prm-alert-bar .bar prm-authentication .md-button:hover,
+ prm-alert-bar .bar prm-authentication .md-button:focus {
+    color: #ffffff !important;
+    background-color: #587500 !important;
+}
+
+.results-container prm-brief-result-container {
+     cursor: pointer;
+}
+
+.md-button.button-confirm,
+.md-button.button-confirm:focus:not([disabled]) {
+    
+    background-color: $link;
+    border: solid 1px $link;
+    color: white;
+}
+
+.md-button.button-confirm:hover:not([disabled]) {
+    
+    color: $link;
+    border: solid 1px $link;
+    background-color: transparent;
+}
+.__xs prm-full-view prm-brief-result-container .list-item-primary-content {
+    padding: 0px !important;
+}
+
+prm-search-result-thumbnail-container img {
+    box-shadow: 0 1px 1px rgba(0,0,0,.3),1px 1px 0 #fff,-3px 3px 10px -3px rgba(0,0,0,.3);
+}
+
+prm-brief-result-container h3 a:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+prm-brief-result-container .md-button.arrow-link-button:hover .button-content {
+    box-shadow: none;
+}
+
+prm-brief-result-container .md-button:hover:not([disabled]) {
+    background-color: transparent;
+}
+
+
+.resp-container iframe {
+    width: 100%;
+}
+
+#footer > div > md-card {
+    margin: 0;
+}
+
+#footer md-card-content {
+    padding: 1em 1em 0 0;
+}
+
+#footer a {
+    color: white;
+}
+
+#footer a:hover {
+    box-shadow: unset;
+    text-decoration: underline;
+}
+
+.prm-secondary-bg {
+    color: rgba(255, 255, 255, 0.85);
+    background-color: #808080;
+}
+
+md-card.default-card md-card-title:not(#featuredResultTitle) {
+    padding-top: 16px
+}
+md-card-title.collapsible {
+    cursor: pointer;
+}
+
+.cardbox h1 {
+    font-size: 42px;
+    line-height: 56px;
+    font-weight: 500;
+}
+
+md-card.help.default-card.cardbox {
+    background-color: $topcolor !important;
+    color:#dfdfdf;
+}
+
+md-card.help.default-card.cardbox a {
+    color: #dfdfdf;
+    font-weight: bold;
+}
+
+md-card.help.default-card.cardbox a:hover {
+    box-shadow: inset 0 -2px 0 0 #dfdfdf;
+}
+
+md-card-title h2 {
+    margin: 0;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+h2.md-headline {
+    font-size: 32px !important;
+    line-height: 32px !important;
+    font-weight: 500;
+}
+md-card.default-card md-card-content.section {
+    padding: 0;
+}
+
+md-card.default-card md-card-content.section md-card {
+    margin: 0;
+    border-top: 1px dotted $topcolor;
+}
+h3.md-headline{
+    font-size: 24px !important;
+    line-height: 24px !important;
+    margin: 4px 0 0 0;
+    font-weight: 500;
+}
+
+md-card-title md-icon,
+.md-subheader-content md-icon {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}
+
+md-card-title md-icon.toggled,
+.md-subheader-content md-icon.toggled{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+md-card-title md-card-title-media .icon {
+    height: 36px;
+    width: 36px;
+    margin-top: 6px;
+    margin-right: 8px;
+}
+
+md-card md-list {
+    padding: 0;
+    color: #404040;
+}
+
+md-card.alert-list md-list {
+    background-color: $alert;
+    color: black;
+}
+md-card.success-list md-list {
+    background-color: $green;
+    color: black;
+}
+
+md-card.on-campus md-list {
+    padding-top: 0.5em;
+}
+
+md-card.on-campus {
+    min-height: 90px;
+}
+md-card.news md-list md-list-item.md-3-line .md-list-item-text h3 {
+    font-weight: bold;
+}
+md-card md-list md-list-item.md-3-line svg.md-avatar {
+    margin-top: 24px;
+}
+
+md-card.news md-list-item .md-list-item-inner,
+md-card.news md-list-item.md-3-line > .md-no-style::before {
+    min-height: unset;
+}
+
+md-card.news md-list-item._md-button-wrap > div.md-button:first-child {
+    padding: .5em 1em;
+}
+
+md-card md-list md-list-item.md-3-line a {
+    color: #404040;
+    font-weight: bold;
+}
+md-card md-list md-list-item.md-3-line a:hover {
+    box-shadow: inset 0 -1px 0 0 #404040;
+}
+
+md-card.news md-list md-list-item .md-button.md-no-style:hover {
+    background-color: transparent;
+}
+
+md-card.news md-card-content {
+    padding: 0;
+}
+md-card.news md-list md-list-item.md-3-line {
+    padding: 0;
+}
+
+md-card.news md-list md-list-item.md-3-line ._md-list-item-inner,
+md-card.news md-list md-list-item ._md-list-item-inner {
+    align-items: unset;
+    min-height: 32px;
+}
+
+md-card.news md-list md-list-item.md-3-line ._md-list-item-inner h3 {
+    font-weight: 600;
+    font-size: 16.5px;
+}
+
+md-card.news md-list md-list-item ._md-list-item-inner h3 {
+    line-height: normal;
+    margin-bottom: 0;
+    font-weight: normal;
+    margin-top: 3px;
+}
+md-card.news md-list .md-subheader {
+    background-color: #cccccc;
+    font-size: 18px;
+    cursor: pointer;
+    border-top: 1px dotted $topcolor;
+}
+
+md-card.news md-list .md-subheader md-icon {
+    float: right;
+}
+
+md-card.news md-list.libraries md-list-item ._md-secondary-container,
+md-card.news md-list.libraries md-list-item .md-secondary-container {
+    height: 30px;
+    width: 30px;
+}
+
+md-card.news md-list.libraries md-list-item h3 {
+    font-weight: normal;
+    margin: 0;
+}
+
+md-card.news md-list md-list-item:hover,
+md-card.news md-list md-list-item:focus{
+    background-color:#eeeeee;
+    color: #3a3a3a
+}
+
+.md-button:focus:not([disabled]) {
+    background-color: transparent;
+}
+
+md-card.news md-list md-list-item ._md-secondary-container svg.status-true,
+md-card.news md-list md-list-item .md-secondary-container svg.status-true {
+    color: #99cc00
+}
+
+md-card.news md-list md-list-item ._md-secondary-container svg.status-false,
+md-card.news md-list md-list-item .md-secondary-container svg.status-false {
+    color:  #df0000
+}
+
+md-card.news md-list md-list-item ._md-secondary-container svg.status-,
+md-card.news md-list md-list-item .md-secondary-container svg.status- {
+    color:  #a0a0a0
+}
+
+md-card.news md-list button._md-no-style.md-button.md-primoExplore-theme.md-ink-ripple,
+md-card.news md-list button.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple,
+md-card.news md-list a._md-no-style.md-button.md-primoExplore-theme.md-ink-ripple,
+md-card.news md-list a.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple {
+    border-top: 1px dotted #a0a0a0;
+}
+
+md-card.news md-list a._md-no-style.md-button.md-primoExplore-theme.md-ink-ripple:hover,
+md-card.news md-list a.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple:hover,
+md-card.news md-list a._md-no-style.md-button.md-primoExplore-theme.md-ink-ripple:focus,
+md-card.news md-list a.md-no-style.md-button.md-primoExplore-theme.md-ink-ripple:focus {
+    box-shadow: none;
+}
+
+md-card.news md-list md-list-item.md-3-line .date {
+    width: 48px;
+    min-width: 48px;
+    margin-right: 12px;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 2px;
+}
+
+md-card.news md-list md-list-item.md-3-line .date .day {
+    font-size: 36px;
+}
+
+md-card.news md-list md-list-item.md-3-line .date .month{
+    font-size: 21px;
+    margin-top: 5px;
+}
+
+md-card.news md-list md-list-item.md-3-line .date .month {
+    text-transform: uppercase;
+}
+
+md-card.news md-list md-list-item md-icon {
+    margin: 0 12px 0 0 !important;
+    height: 36px;
+    width: 36px !important;
+}
+
+md-card.info md-card-content svg {
+    height: 1em;
+    position: relative;
+    top: 3px;
+}
+
+md-card.patrimoine {
+    background-image: url('https://svw-uo1061bcu.unifr.ch/bcu_api/photo_app/images/BERA_01584?code_insti=BCU?offset=30&limit=10&max_size=300');
+    background-size: cover;
+}
+
+md-card.patrimoine md-card-title,
+md-card.patrimoine md-card-content {
+    background-color:rgba(255, 255, 255, 0.9);
+}
+
+md-card.news.patrimoine md-list md-list-item:hover{
+    background-color:rgba(0, 0, 0, 0.1);
+}
+
+.md-button:hover:not([disabled]),
+.md-button:focus:not([disabled]) {
+    background-color: $lightgrey;
+    color: #3a3a3a;
+}
+/*** user menu ***/
+md-menu-item.my-refworks-ctm,
+md-menu-divider.my-refworks-separator-ctm {
+    display: none;
+}
+
+prm-user-area-expandable .button-with-menu-arrow:hover .menu-arrow:hover:not([disabled]),
+prm-user-area-expandable .button-with-menu-arrow:hover .menu-arrow {
+    background-color: #a0a0a0;
+    color: #3a3a3a;
+}
+
+.md-dialog-container.fixed-container {
+    background-color: rgba(83,83,83,.9);
+}
+
+#virtualBrowse,
+button[aria-label="Virtual Browse"],
+button[aria-label="Etagère virtuelle"],
+button[aria-label="Etag&#232;re virtuelle"],
+button[aria-label="Virtuelle Indexsuche"],
+button[aria-label="Scorri virtualmente"] {
+    display: none;
+}
+
+prm-full-view .services-index-under {
+    left: unset;
+}
+
+prm-full-view .services-index-under .md-button.button-link,
+prm-full-view .services-index-under .md-button.button-link:focus:not([disabled]) {
+    text-overflow: clip;
+    text-transform: none;
+    width: 100%;
+    margin: 2px 0 !important;
+    line-height: 20px;
+    white-space: normal;
+    color: $link;
+    background-color: white !important;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 0px 0px, rgba(0, 0, 0, 0.07) 0px 5px 5px -3px;
+    padding: 5px;
+    border: unset;
+}
+
+prm-full-view .services-index-under .md-button.button-link:hover:not([disabled]) {
+    background-color: $link  !important;
+    color: white;
+}
+
+prm-full-view md-tabs.tabs-as-app .back-button,
+prm-full-view md-tabs.tabs-as-app .back-button:focus:not([disabled]) {
+    color: $link;
+    background-color: white !important;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 0px 0px, rgba(0, 0, 0, 0.07) 0px 5px 5px -3px;
+    margin-bottom: .5em !important;
+}
+
+prm-full-view md-tabs.tabs-as-app .back-button:hover:not([disabled]) {
+    color: white;
+    background-color: $link !important;
+}
+
+prm-location p span:last-child,
+prm-location-items p span:last-child {
+    font-weight: bold;
+}
+
+prm-alma-viewit-items md-list-item {
+    color: #3d6e94 !important;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 0px 0px, rgba(0, 0, 0, 0.07) 0px 5px 5px -3px;
+}
+
+prm-alma-viewit-items md-list-item:hover {
+    background-color: $lightgrey !important;
+}
+
+prm-alma-viewit-items md-list-item a.item-title:hover {
+    box-shadow: none;
+}
+
+prm-alma-viewit-items md-list-item button {
+    padding: 0 .5em;
+}
+
+/*** Request & ILL ***/
+.links-block-item.separated-block-item {
+    margin-right: 1em;
+}
+
+.links-block-item.separated-block-item::after {
+    content: none;
+}
+
+/* safari workaround */
+prm-alma-other-members button.layout-fill,
+prm-alma-other-units button.layout-fill {
+    height: auto;
+    min-height: auto;
+}
+
+prm-opac md-tabs {
+    overflow: visible;
+}
+
+prm-location-holdings button.link-alt-color.button-as-link {
+    margin-left: 0;
+    margin-top: 3px;
+}
+
+prm-location-holdings div.margin-top-small {
+    margin-top: 0;
+}
+
+prm-location-holdings div.weak-text div.summary-brief-header {
+    font-weight: 600;
+}
+
+prm-location-holdings .padding-left-medium {
+    padding-left: 1em;
+}
+
+prm-location-items .margin-left-medium {
+    margin-left: unset;
+}
+
+prm-location div div .md-list-item-text .flex {
+    flex: unset;
+}
+/* SLSP styles for ILL button */
+#getit_link1_0 > div > prm-full-view-service-container > div.section-body > div {
+    display: flex;
+    flex-direction: column;
+}
+
+prm-opac {
+    order: 1;
+}
+
+prm-alma-other-members {
+    order: 2;
+display: grid;
+}
+
+alma-htgi-svc {
+   order: 3;
+}
+
+primo-explore.logged-out alma-htgi-svc, primo-explore.alert alma-htgi-svc {
+  order: 0 !important
+}
+
+/* additional styling */
+.medium-uppercase-bold {
+    font-size: 1.3em;
+    text-transform: none;
+    font-weight: normal;
+}
+
+prm-locations >  .padding-left-medium {
+    padding-left: 0;
+}
+
+prm-location-itmes .margin-left-medium {
+    margin-left: 0;
+}
+
+.separate-list-items.md-primoExplore-theme:empty
+ {
+    display: none;
+}
+/*** request form ***/
+
+prm-form-field.liblist label._md-container-ignore {
+    display: none;
+}
+
+prm-form-field prm-icon {
+    padding-right: 1em;
+}
+
+/*** ILL Form ***/
+@media(min-width:1280px) {
+    prm-blank_ill .top-nav-bar.layout-row,
+    prm-services-page .top-nav-bar.layout-row {
+        padding-bottom: 76px;
+        height: 136px;
+    }
+}
+    
+
+/*** general overwright ***/
+.duedate > span, .ext_not_restricted > span,
+.fulltext > span, .fulltext_linktorsrc > span,
+.fulltext_linktorsrc_newspaper > span, .fulltext_linktorsrc_topic > span,
+.fulltext_newspaper > span, .fulltext_topic > span,
+.getit > span, .login-dialog .collapsable-container md-list md-list-item .md-list-item-inner,
+.login-dialog .md-list[class$="-line"] md-list-item .md-list-item-text .list-item-title,
+.login-dialog .md-list[class$="-line"] md-list-item .md-list-item-text h3,
+.login-dialog .md-list[class$="-line"] md-list-item > .md-no-style .md-list-item-text .list-item-title,
+.login-dialog .md-list[class$="-line"] md-list-item > .md-no-style .md-list-item-text h3,
+.login-dialog .md-list md-list-item .md-list-item-text .list-item-title,
+.login-dialog .md-list md-list-item .md-list-item-text h3,
+.login-dialog .md-list md-list-item > .md-no-style .md-list-item-text .list-item-title,
+.login-dialog .md-list md-list-item > .md-no-style .md-list-item-text h3,
+.login-dialog md-list md-list-item .md-list-item-text .list-item-title,
+.login-dialog md-list md-list-item .md-list-item-text h3,
+.login-dialog md-list md-list-item > .md-no-style .md-list-item-text .list-item-title,
+.login-dialog md-list md-list-item > .md-no-style .md-list-item-text h3,
+.md-button.arrow-link-button .button-content, .md-button.arrow-link-button [link-arrow],
+.md-button.arrow-link-button prm-usage-metrics div[id^="_altmetric_popover_el"].altmetric-embed div#_altmetric_container.altmetric_container .link-to-altmetric-details-tab.button-content,
+not_restricted > span, .prm-links, .restricted > span,
+.separate-list-items md-list-item .item-loader-with-text .md-button, .tiles-grid-tile .tile-header .header-link .arrow-icon, .tiles-grid-tile .tile-header .md-button, .worldcat > span,
+[class*="_more"] > span, [class*="_unknown"] > span, [class*="available"] > span, [class*="check_"] > span,
+[class*="does_not_exist"] > span, [class*="FT"] > span, [class*="may_"] > span, [class*="NFT"] > span,
+[class*="no_"] > span, [class*="unavailable"] > span, a, md-grid-tile .tile-header .header-link .arrow-icon,
+md-grid-tile .tile-header .md-button, md-input-container.has-fixed-message [ng-message] a, md-list-item.list-item-as-link,
+md-tabs.tabs-as-links md-tab-item, md-tabs.tabs-as-links md-tab-item:not([disabled]),
+prm-tags-list .md-chips .md-chip .md-chip-content strong, prm-tags-list .md-chips md-chip .md-chip-content strong,
+prm-tags-list md-chips .md-chip .md-chip-content strong, prm-tags-list md-chips md-chip .md-chip-content strong,
+prm-usage-metrics div[id^="_altmetric_popover_el"].altmetric-embed div#_altmetric_container.altmetric_container .md-button.arrow-link-button .link-to-altmetric-details-tab.button-content,
+prm-usage-metrics div[id^="_altmetric_popover_el"].altmetric-embed div#_altmetric_container.altmetric_container a.link-to-altmetric-details-tab,
+.result-item-actions button.md-icon-button {
+    color: $link;
+}
+
+.md-button.arrow-link-button .button-content:focus,
+.md-button.arrow-link-button .button-content:hover,
+.md-button.arrow-link-button .hover.button-content,
+.md-button.arrow-link-button:focus .button-content,
+.md-button.arrow-link-button:hover .button-content,
+.recommendations-title.hover > span > span,
+.recommendations-title:hover > span > span,
+a.hover, a:focus, a:hover,
+prm-chapters-and-reviews md-card > .md-button:focus .item-title span,
+prm-chapters-and-reviews md-card > .md-button:hover .item-title span,
+prm-citation-trails-item.active-item md-card > .md-button:focus .item-title span,
+prm-citation-trails-item.active-item md-card > .md-button:hover .item-title span,
+prm-tags-list .md-chips .md-chip .md-chip-content:hover strong,
+prm-tags-list .md-chips md-chip .md-chip-content:hover strong,
+prm-tags-list md-chips .md-chip .md-chip-content:hover strong,
+prm-tags-list md-chips md-chip .md-chip-content:hover strong {
+    box-shadow: inset 0 -2px 0 0 $link;
+}
+
+md-checkbox.md-focused:not([disabled]) ._md-container::before,
+md-checkbox ._md-container::after {
+    display: none;
+}
+
+.md-button.button-link:hover:not([disabled]),
+.md-button.button-link._md-focused:not([disabled]), .md-button.button-link.hovered:not([disabled]), .md-button.button-link.md-focused:not([disabled]), .md-button.button-link:focus:not([disabled]), .tiles-grid-tile .tile-content > .md-button._md-focused:not([disabled]), .tiles-grid-tile .tile-content > .md-button.hovered:not([disabled]), .tiles-grid-tile .tile-content > .md-button.md-focused:not([disabled]), .tiles-grid-tile .tile-content > .md-button:focus:not([disabled]), .tiles-grid-tile .tile-content > .md-button:hover:not([disabled]), md-grid-tile .tile-content > .md-button._md-focused:not([disabled]), md-grid-tile .tile-content > .md-button.hovered:not([disabled]), md-grid-tile .tile-content > .md-button.md-focused:not([disabled]), md-grid-tile .tile-content > .md-button:focus:not([disabled]), md-grid-tile .tile-content > .md-button:hover:not([disabled]),
+.bar prm-authentication .md-button._md-focused:not([disabled]), .bar prm-authentication .md-button.hovered:not([disabled]), .bar prm-authentication .md-button.md-focused:not([disabled]), .bar prm-authentication .md-button:focus:not([disabled]), .bar prm-authentication .md-button:hover:not([disabled]), .md-button.button-as-link._md-focused:not([disabled]), .md-button.button-as-link.hovered:not([disabled]), .md-button.button-as-link.md-focused:not([disabled]), .md-button.button-as-link:focus:not([disabled]), .md-button.button-as-link:hover:not([disabled]),
+md-tabs.tabs-as-app .back-button._md-focused:not([disabled]), md-tabs.tabs-as-app .back-button.hovered:not([disabled]), md-tabs.tabs-as-app .back-button.md-focused:not([disabled]), md-tabs.tabs-as-app .back-button:focus:not([disabled]),
+.bar prm-authentication .md-button.link-alt-color._md-focused:not([disabled]), .bar prm-authentication .md-button.link-alt-color.hovered:not([disabled]), .bar prm-authentication .md-button.link-alt-color.md-focused:not([disabled]), .bar prm-authentication .md-button.link-alt-color:focus:not([disabled]), .bar prm-authentication .md-button.link-alt-color:hover:not([disabled]), .bar prm-authentication .section-title prm-icon.md-button._md-focused:not([disabled]), .bar prm-authentication .section-title prm-icon.md-button.hovered:not([disabled]), .bar prm-authentication .section-title prm-icon.md-button.md-focused:not([disabled]), .bar prm-authentication .section-title prm-icon.md-button:focus:not([disabled]), .bar prm-authentication .section-title prm-icon.md-button:hover:not([disabled]), .is-gallery-view prm-gallery-item .collection-element .item-actions ._md-focused.md-button:not([disabled]), .is-gallery-view prm-gallery-item .collection-element .item-actions .hovered.md-button:not([disabled]), .is-gallery-view prm-gallery-item .collection-element .item-actions .md-button:focus:not([disabled]), .is-gallery-view prm-gallery-item .collection-element .item-actions .md-button:hover:not([disabled]), .is-gallery-view prm-gallery-item .collection-element .item-actions .md-focused.md-button:not([disabled]), .is-gallery-view prm-gallery-item .collection-element .item-actions button._md-focused:not([disabled]), .is-gallery-view prm-gallery-item .collection-element .item-actions button.hovered:not([disabled]), .is-gallery-view prm-gallery-item .collection-element .item-actions button.md-focused:not([disabled]), .is-gallery-view prm-gallery-item .collection-element .item-actions button:focus:not([disabled]), .is-gallery-view prm-gallery-item .collection-element .item-actions button:hover:not([disabled]), .is-grid-view prm-gallery-item .collection-element .item-actions ._md-focused.md-button:not([disabled]), .is-grid-view prm-gallery-item .collection-element .item-actions .hovered.md-button:not([disabled]), .is-grid-view prm-gallery-item .collection-element .item-actions .md-button:focus:not([disabled]), .is-grid-view prm-gallery-item .collection-element .item-actions .md-button:hover:not([disabled]), .is-grid-view prm-gallery-item .collection-element .item-actions .md-focused.md-button:not([disabled]), .is-grid-view prm-gallery-item .collection-element .item-actions button._md-focused:not([disabled]), .is-grid-view prm-gallery-item .collection-element .item-actions button.hovered:not([disabled]), .is-grid-view prm-gallery-item .collection-element .item-actions button.md-focused:not([disabled]), .is-grid-view prm-gallery-item .collection-element .item-actions button:focus:not([disabled]), .is-grid-view prm-gallery-item .collection-element .item-actions button:hover:not([disabled]), .md-button.button-as-link.link-alt-color._md-focused:not([disabled]), .md-button.button-as-link.link-alt-color.hovered:not([disabled]), .md-button.button-as-link.link-alt-color.md-focused:not([disabled]), .md-button.button-as-link.link-alt-color:focus:not([disabled]), .md-button.button-as-link.link-alt-color:hover:not([disabled]), .section-title .bar prm-authentication prm-icon.md-button._md-focused:not([disabled]), .section-title .bar prm-authentication prm-icon.md-button.hovered:not([disabled]), .section-title .bar prm-authentication prm-icon.md-button.md-focused:not([disabled]), .section-title .bar prm-authentication prm-icon.md-button:focus:not([disabled]), .section-title .bar prm-authentication prm-icon.md-button:hover:not([disabled]), .section-title prm-icon.md-button.button-as-link._md-focused:not([disabled]), .section-title prm-icon.md-button.button-as-link.hovered:not([disabled]), .section-title prm-icon.md-button.button-as-link.md-focused:not([disabled]), .section-title prm-icon.md-button.button-as-link:focus:not([disabled]), .section-title prm-icon.md-button.button-as-link:hover:not([disabled]), prm-gallery-collection .collection-folder .item-actions ._md-focused.md-button:not([disabled]), prm-gallery-collection .collection-folder .item-actions .hovered.md-button:not([disabled]), prm-gallery-collection .collection-folder .item-actions .md-button:focus:not([disabled]), prm-gallery-collection .collection-folder .item-actions .md-button:hover:not([disabled]), prm-gallery-collection .collection-folder .item-actions .md-focused.md-button:not([disabled]), prm-gallery-collection .collection-folder .item-actions button._md-focused:not([disabled]), prm-gallery-collection .collection-folder .item-actions button.hovered:not([disabled]), prm-gallery-collection .collection-folder .item-actions button.md-focused:not([disabled]), prm-gallery-collection .collection-folder .item-actions button:focus:not([disabled]), prm-gallery-collection .collection-folder .item-actions button:hover:not([disabled]),
+.multiselect-submit .multiselect-submit-inner .md-button.md-primary,
+prm-facet-group md-checkbox.md-checked ._md-icon,
+.advanced-search-wrapper button.button-confirm,
+.advanced-search-wrapper .md-button.md-primary:hover:not([disabled]),
+prm-search-bar .simple-search-wrapper .search-actions .md-button.button-confirm:hover:not([disabled]),
+.user-menu-header .md-button.md-primary:hover:not([disabled])
+{
+    background-color: transparent !important;
+    color: $link;
+}
+
+.tiles-grid-tile .tile-content > .md-button,
+md-grid-tile .tile-content > .md-button,
+.bar prm-authentication .md-button.link-alt-color, .bar prm-authentication .section-title prm-icon.md-button,
+.is-gallery-view prm-gallery-item .collection-element .item-actions .md-button, .is-gallery-view prm-gallery-item .collection-element .item-actions button, .is-grid-view prm-gallery-item .collection-element .item-actions .md-button, .is-grid-view prm-gallery-item .collection-element .item-actions button, .md-button.button-as-link.link-alt-color, .section-title .bar prm-authentication prm-icon.md-button, .section-title prm-icon.md-button.button-as-link, prm-gallery-collection .collection-folder .item-actions .md-button, prm-gallery-collection .collection-folder .item-actions button,
+.multiselect-submit .multiselect-submit-inner .md-button.md-primary:focus, .multiselect-submit .multiselect-submit-inner .md-button.md-primary:hover,
+
+.advanced-search-wrapper .md-button.button-confirm:hover,
+md-tabs.tabs-as-app .back-button:hover:not([disabled]) {
+    background-color: $link;
+    color: $white;
+}
+
+prm-brief-result .item-title,
+prm-brief-result .item-title span,
+.md-button.button-link.link-alt-color {
+    color: $link !important;
+}
+
+prm-location-items .md-button.button-link.link-alt-color,
+.md-button.button-link.link-alt-color:focus:not([disabled]),
+prm-service-details .md-button.button-link.link-alt-color {
+    background-color: white !important;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 0px 0px, rgba(0, 0, 0, 0.07) 0px 5px 5px -3px;
+    width: 100%;
+}
+
+prm-location-items .md-button.button-link.link-alt-color:hover:not([disabled]),
+prm-service-details .md-button.button-link.link-alt-color:hover:not([disabled]) {
+    background-color: $link !important;
+    color: white !important;
+}
+
+prm-location-items .padding-left-medium {
+    padding-left: 0;
+}
+
+prm-location-items .padding-left-medium .bar.alert-bar {
+    background-color: $alert;
+}
+
+.md-button.button-link,
+.button-as-link.md-button, .button-as-link.md-button:hover,
+.md-button.md-primary,
+.multiselect-submit .multiselect-submit-inner .md-button.md-primary:focus, .multiselect-submit .multiselect-submit-inner .md-button.md-primary:hover,
+.advanced-search-wrapper .md-button.button-confirm:hover,
+.advanced-search-wrapper .md-button.button-confirm
+{
+    border: solid 1px $link;
+    background-color: $link !important;
+    color: $white;
+}
+
+.multiselect-submit .multiselect-submit-inner .md-button.md-primary:focus, .multiselect-submit .multiselect-submit-inner .md-button.md-primary:hover,
+.advanced-search-wrapper .md-button.button-confirm:hover:not([disabled]) {
+    background-color: transparent;
+}
+
+prm-action-list .md-nav-bar button.md-button.md-primary,
+prm-action-list md-nav-bar.vertical-nav-bar .md-nav-item .md-button.md-active {
+    border: none;
+    color: white;
+}
+
+prm-action-list .md-nav-bar button.md-button:hover {
+  background-color: #cccccc !important;
+  color: #3a3a3a !important;
+}
+
+#favorites-button:hover {
+  box-shadow: none;
+}
+
+prm-export-ris md-input-container,
+prm-export-bibtex md-input-container,
+prm-export-excel md-input-container
+
+{
+    margin: 0;
+    padding: 0 !important;
+}
+
+/*Library card Personal details display*/
+#personalDetails > md-card-content > div {
+    flex-flow: column;
+}
+
+#personalDetails .md-input-has-value.layout-column {
+    min-width: 400px;
+}
+prm-personal-info-after {
+    display: flex;
+}
+

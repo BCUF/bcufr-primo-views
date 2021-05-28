@@ -1,0 +1,742 @@
+<md-content id="help" ng-controller="BcuHelp">
+    <div class="ps_content md-padding" layout-gt-sm="row" layout-align="center center">
+        <div flex="100" flex-md="100" flex-lg="80" flex-xl="60" layout="column">
+            <md-card class="cardbox default-card help">
+                <md-card-title>
+                    <md-card-title-text>
+                        <h1 class="md-headline">Discovery Fribourg-Freiburg: Aide</h1>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="card-media"><a href="https://slsp-bcufr.primo.exlibrisgroup.com/discovery/search?vid={{view.replace('-',':')}}" target="_blank"><img src="custom/{{view}}/img/library-logo.png"></a></div>
+                      </md-card-title-media>
+                </md-card-title>
+                <md-card-content>
+                    <p><a href="https://slsp-bcufr.primo.exlibrisgroup.com/discovery/search?vid={{view.replace('-',':')}}" target="_blank">Discovery Fribourg-Freiburg</a> est l'outil de d&eacute;couverte de la <a href="https://www.fr.ch/bcu" target="_blank">Bibliothèque cantonale et universitaire</a>, des <a href="https://www.unifr.ch/biblio/" target="_blank">bibliothèques à l'Université</a> et des <a href="https://www.fr.ch/app/bibliotheques?f_type=3" target="_blank">bibliothèques affiliées</a>. Sur cette page, vous trouverez des informations utiles sur la mani&egrave;re d'utiliser Discovery Fribourg-Freiburg et sur l'organisation du <a href="https://www.slsp.ch/" target="_blank">Swiss Library Service Platform Network (SLSP)</a> dont Discovery fait partie.</p>
+                    <p>Attention: cette page d'aide a &eacute;t&eacute; cr&eacute;&eacute;e pour l'ensemble du r&eacute;seau SLSP! Cela signifie que certains services peuvent ne pas &ecirc;tre disponibles dans Discovery Fribourg-Freiburg. Veuillez noter que la page d'accueil ou l'affichage complet de la notice peut varier d'une institution &agrave; l'autre par rapport &agrave; ce qui est pr&eacute;sent&eacute; ici.</p>
+                </md-card-content>
+            </md-card>
+
+            <md-card class="default-card" id="general">
+                <md-card-title class="collapsible" ng-click="ctrl.$showGeneral = !ctrl.$showGeneral">
+                    <md-card-title-text>
+                        <h2 class="md-headline">G&eacute;n&eacute;ral</h2>
+                    </md-card-title-text>
+                    <md-icon ng-class="{'toggled' : ctrl.$showGeneral}">
+                        <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                        </svg>
+                    </md-icon>
+                </md-card-title>
+ 
+                <md-card-content class="ng-hide section" ng-show="ctrl.$showGeneral" aria-hidden="true">
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showGeneral1 = !ctrl.$showGeneral1">
+                            <md-card-title-text>
+                                <h3 class="md-headline">SLSP: Swiss Library Service Platform</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showGeneral1}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showGeneral1"  aria-hidden="true">
+                            <p>Swiss Library Service Platform ainsi que sa filiale, le Consortium des biblioth&egrave;ques universitaires suisses, comptant plus de 450 membres, est le plus large r&eacute;seau de biblioth&egrave;ques de recherche universitaires de Suisse. Cr&eacute;&eacute; par des biblioth&egrave;ques pour les biblioth&egrave;ques, il s'agit d'un effort conjoint visant &agrave; offrir un panel de services dans tout le pays tels qu'un catalogue multilingue partag&eacute; d'informations scientifiques, une repr&eacute;sentation unique de l'octroi de licences pour les ressources &eacute;lectroniques et un r&eacute;seau performant de navettes dans le cadre du partage des exemplaires physiques.</p>
+                            <p>SLSP repr&eacute;sente une avanc&eacute;e novatrice et significative dans l'&eacute;volution num&eacute;rique des biblioth&egrave;ques scientifiques en Suisse. En g&eacute;rant le syst&egrave;me bas&eacute; dans le cloud Alma, l'organisation rassemble les informations scientifiques conserv&eacute;es dans les biblioth&egrave;ques sur tout le territoire. En rendant ces informations accessibles et faciles &agrave; trouver, SLSP contribue &agrave; la d&eacute;couverte et au progr&egrave;s scientifiques.</p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showGeneral2 = !ctrl.$showGeneral2">
+                            <md-card-title-text>
+                                <h3 class="md-headline">R&eacute;seau SLSP</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showGeneral2}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showGeneral2"  aria-hidden="true">
+                            <p>Le r&eacute;seau SLSP est divis&eacute; en plusieurs &laquo;zones&raquo;. SLSP g&egrave;re la zone r&eacute;seau (NZ) appel&eacute;e swisscovery, tandis que les biblioth&egrave;ques ont &eacute;t&eacute; r&eacute;parties en 29 "zones institutionnelles" (IZ).</p>
+                            <p>Une zone institutionnelle (IZ) est un groupe de biblioth&egrave;ques ayant des besoins similaires. L'IZ est un &eacute;l&eacute;ment-cl&eacute; du syst&egrave;me SLSP, il permet des associations et accro&icirc;t l'efficacit&eacute;. Au sein de SLSP, nous distinguons deux types de zone institutionnelles: les zones &agrave; entit&eacute; unique et les zones &agrave; entit&eacute; mixte.</p>
+                            <p>Dans une zone &agrave; entit&eacute; unique, les biblioth&egrave;ques sont li&eacute;es &agrave; une entit&eacute; principale d'un point de vue juridique (par exemple une Universit&eacute;). Dans une zone &agrave; entit&eacute; mixte, les biblioth&egrave;ques sont li&eacute;es &agrave; diff&eacute;rentes entit&eacute;s juridiques (elles sont par exemple group&eacute;es ensemble pour des consid&eacute;rations d'ordre g&eacute;ographique).</p>
+                            <p>Pour acc&eacute;der aux ressources des membres de SLSP, les usagers doivent acc&eacute;der aux interfaces usagers appel&eacute;es &laquo;vues&raquo;. Au sein de SLSP, nous avons pr&eacute;par&eacute; une vue pour la Zone r&eacute;seau (NZ), une vue pour la Zone institutionnelle (IZ) et plusieurs vues pour les biblioth&egrave;ques individuelles.</p>
+                            <p>Chaque vue dispose de domaines de recherche sp&eacute;cifiques qui donneront des r&eacute;sultats diff&eacute;rents lors de la recherche. La zone r&eacute;seau swisscovery comprend l'ensemble des notices des biblioth&egrave;ques SLSP, certaines ressources externes g&eacute;n&eacute;rales (par exemple la base de donn&eacute;es e-rara) et l'index CDI (Central Discovery Index). Les vues des zones institutionnelles et les vues des biblioth&egrave;ques contiennent l'inventaire local de la zone institutionnelle / biblioth&egrave;que, des ressources externes g&eacute;n&eacute;rales et locales ainsi que l'index CDI.</p>
+                            <p>Central Discovery Index (CDI): il s'agit d'une base de donn&eacute;es centralis&eacute;e comportant plus de 3 milliards de notices telles que: articles de p&eacute;riodiques, e-books, th&egrave;ses, comptes rendus de conf&eacute;rences, etc.</p>
+                            <img width="935" src="custom/{{view}}/img/help/swisscovery_fre.png" />
+                            <p>En cliquant sur le <a href="https://slsp.ch/en" target="_blank">lien</a> suivant, vous trouvez la topologie du r&eacute;seau de la SLSP, une liste d&eacute;taill&eacute;e de l'ensemble des biblioth&egrave;ques membres, organis&eacute;e par zone institutionnelle ainsi que le lien vers chaque vue existante de notre r&eacute;seau. Vous y trouvez l'adresse, les coordonn&eacute;es et les services propos&eacute;s par chaque IZ et biblioth&egrave;que.</p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showGeneral3 = !ctrl.$showGeneral3">
+                            <md-card-title-text>
+                                <h3 class="md-headline">Cr&eacute;er un compte</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showGeneral3}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showGeneral3"  aria-hidden="true">
+                            <p>Pour s'enregistrer sur SLSP, rendez-vous d'abord sur: <a href="https://registration.slsp.ch" target="_blank">https://registration.slsp.ch</a></p>
+                            <p>Au d&eacute;but de l'enregistrement, il vous est demand&eacute; de vous connecter avec un compte SWITCH edu-ID. Si vous avez d&eacute;j&agrave; un compte SWITCH edu-ID, connectez-vous pour proc&eacute;der &agrave; l'enregistrement. Si vous n'avez pas encore de mot de passe, un lien sur la page de connexion vous permet de le r&eacute;initialiser.</p>
+                            <p>Si vous n'avez pas encore de compte SWITCH edu-ID, cliquez sur "Cr&eacute;er un compte" sur la page de connexion.</p>
+                            <p><strong>Remarque:</strong> Si vous &eacute;tudiez dans une Universit&eacute;, il est possible que vous soyez d&eacute;j&agrave; enregistr&eacute;(e) sur SLSP auparavant. Si tel est le cas, un message appara&icirc;tra et vous serez redirig&eacute;(e) vers la page de connexion. </p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showGeneral4 = !ctrl.$showGeneral4">
+                            <md-card-title-text>
+                                <h3 class="md-headline">Carte de biblioth&egrave;que</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showGeneral4}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showGeneral4"  aria-hidden="true">
+                            <p>Avec votre carte de biblioth&egrave;que, vous avez acc&egrave;s &agrave; tout un panel de services, vous pouvez par exemple emprunter un exemplaire physique dans une biblioth&egrave;que.</p>
+                            <p>Si vous poss&eacute;dez d&eacute;j&agrave; une carte de biblioth&egrave;que du <a href="https://www.nb.admin.ch/snl/en/home/services/user-services/bibliopass.html" target="_blank">r&eacute;seau BibliOpass</a>, vous pouvez &eacute;ventuellement indiquer ce num&eacute;ro de carte lors de l'enregistrement sur la SLSP ou ult&eacute;rieurement. Certaines cartes de campus / d'Universit&eacute; / d'&eacute;tudiant peuvent &eacute;galement faire office de carte de biblioth&egrave;que. De m&ecirc;me, certaines Universit&eacute;s fourniront le num&eacute;ro de carte de biblioth&egrave;que &agrave; leurs utilisateurs. Les num&eacute;ros de carte de biblioth&egrave;que associ&eacute;s &agrave; un compte SLSP seront affich&eacute;s pendant le processus d'enregistrement sur SLSP (voir le chapitre "Cr&eacute;er un compte"). </p>
+                            <p>Si vous ne poss&eacute;dez pas de carte de biblioth&egrave;que, vous pouvez demander &agrave; votre biblioth&egrave;que de vous en fournir une.</p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showGeneral5 = !ctrl.$showGeneral5">
+                            <md-card-title-text>
+                                <h3 class="md-headline">Comment s'identifier et se d&eacute;connecter</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showGeneral5}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showGeneral5" aria-hidden="true">
+                            <p>Dans swisscovery: cliquez sur &laquo;S'identifier&raquo; - choisissez votre zone institutionnelle - cliquez sur &laquo;SWITCH edu-ID&raquo; - entrez votre adresse e-mail et votre mot de passe - cliquez sur &laquo;Connexion&raquo;</p>
+                            <p>Dans la vue de votre zone institutionnelle / biblioth&egrave;que: cliquez sur &laquo;S'identifier&raquo; -- cliquez sur &laquo;SWITCH edu-ID&raquo; - entrez votre adresse e-mail et votre mot de passe - cliquez sur &laquo;Connexion&raquo;</p>
+                            <img width="460" src="custom/{{view}}/img/help/signin_fre.png" />
+                            <p>Vous devez &ecirc;tre connect&eacute;(e) pour proc&eacute;der aux actions suivantes:</p>
+                            <ul>
+                                <li>Demander des documents (pr&ecirc;t, demande de num&eacute;risation, pr&ecirc;t entre biblioth&egrave;ques)</li>
+                                <li>Afficher et surveiller vos pr&ecirc;ts et demandes en provenance de biblioth&egrave;ques du r&eacute;seau de SLSP.</li>
+                                <li>Prolonger un d&eacute;lai de pr&ecirc;t, annuler des r&eacute;servations</li>
+                                <li>Sauvegarder vos favoris</li>
+                                <li>Enregistrer les requ&ecirc;tes et activer des notifications</li>
+                                <li>Modifier la langue de mani&egrave;re d&eacute;finitive</li>
+                            </ul>
+                            <p>En tant qu'invit&eacute;, vos favoris, demandes de recherche et la langue s&eacute;lectionn&eacute;e ne peuvent &ecirc;tre enregistr&eacute;s que pour la session de navigation courante.</p>
+                            <p>D&eacute;connectez-vous apr&egrave;s une session pour prot&eacute;ger votre compte d'un &eacute;ventuel acc&egrave;s par d'autres usagers.</p>
+                            <h4>NOTE:</h4>
+                            <p>Certaines ressources en ligne sont accessibles sans identification, mais pour acc&eacute;der &agrave; l'ensemble des ressources disponibles selon votre institution, il est utile de s'identifier.</p>
+                            <p>
+                                L'acc&egrave;s aux ressources en ligne d&eacute;pend souvent de votre affiliation &agrave; une Haute Ecole octroyant des licences, p. ex. en tant qu'&eacute;tudiant ou que chercheur. Certaines Hautes Ecoles autorisent les usagers &agrave; acc&eacute;der aux ressources en ligne &agrave; distance (remote access). Pour plus d'informations sur les conditions d'acc&egrave;s aux ressources en ligne, vous pouvez consulter le chapitre &laquo;Ressources en ligne&raquo; sur cette page d'aide, le <a href="https://consortium.ch/?lang=en" target="_blank">Consortium's website</a>  ou le site Web de la biblioth&egrave;que.
+                            </p>
+                            <p>Ces conditions ne s'appliquent pas aux licences nationales (pour plus d'informations, voir le chapitre correspondant sur cette page d'aide).</p>
+                        </md-card-content>
+                    </md-card>    
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showGeneral6 = !ctrl.$showGeneral6">
+                            <md-card-title-text>
+                                <h3 class="md-headline">Mon compte</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showGeneral6}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showGeneral6"  aria-hidden="true">
+                            <p>Vous devez vous identifier pour acc&eacute;der &agrave; votre compte. Une fois identifi&eacute;(e), cliquez sur votre nom situ&eacute; en haut &agrave; droite de la page. Vous acc&eacute;dez &agrave; un menu contenant certains des sous-menus de votre compte. Pour avoir un acc&egrave;s complet aux donn&eacute;es de votre compte, cliquez sur &laquo;Mon compte&raquo;.</p>
+                            <p>Depuis cette page, vous serez en mesure de consulter vos pr&ecirc;ts, demandes, amendes, messages ainsi que bien d'autres fonctionnalit&eacute;s.</p>
+                            <p><strong>NOTE:</strong> Chaque zone institutionnelle dispose de son propre espace. Cela signifie que si vous empruntez une ressource &agrave; la zone institutionnelle &laquo; EPF Lausanne &raquo; par exemple, et une autre &agrave; la zone institutionnelle &laquo; ETH Zurich &raquo;, vos emprunts sont r&eacute;partis sur des pages diff&eacute;rentes, voir ci-dessous: </p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showGeneral7 = !ctrl.$showGeneral7">
+                            <md-card-title-text>
+                                <h3 class="md-headline">Mettre &agrave; jour votre compte</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showGeneral7}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showGeneral7"  aria-hidden="true">
+                            <p>Pour modifier votre adresse ou toute autre information concernant votre compte, allez sur la page Mon edu-ID sur <a href="https://eduid.ch/" target="_blank">https://eduid.ch/</a> et mettez &agrave; jour votre compte edu-ID. Veuillez noter que les modifications effectu&eacute;es sur &laquo;Mon compte&raquo; dans swisscovery ou dans les zones institution seront &eacute;cras&eacute;es par les informations provenant d'edu-ID. Si vous souhaitez g&eacute;rer vos num&eacute;ros de carte de biblioth&egrave;que, allez sur <a href="https://registration.slsp.ch/register/library-card/" target="_blank">https://registration.slsp.ch/register/library-card/</a> </p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showGeneral8 = !ctrl.$showGeneral8">
+                            <md-card-title-text>
+                                <h3 class="md-headline">D&eacute;finir la langue</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showGeneral8}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showGeneral8"  aria-hidden="true">
+                            <p>Cliquez sur votre nom, puis sur &laquo;Langue d'affichage&raquo; pour modifier la langue pour la session actuelle. Si vous &ecirc;tes connect&eacute;(e), la langue que vous d&eacute;finissez sera enregistr&eacute;e de mani&egrave;re permanente. Vous pouvez &eacute;galement modifier la langue de votre interface en remplissant la section &laquo;informations personnelles&raquo; de votre compte.</p>
+                        </md-card-content>
+                    </md-card>
+                </md-card-content>
+            </md-card>
+
+
+            <md-card class="default-card" id="online">
+                <md-card-title class="collapsible" ng-click="ctrl.$showOnline = !ctrl.$showOnline">
+                    <md-card-title-text>
+                        <h2 class="md-headline">Ressources en ligne</h2>
+                    </md-card-title-text>
+                    <md-icon ng-class="{'toggled' : ctrl.$showJournals}">
+                        <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                        </svg>
+                    </md-icon>
+                </md-card-title>
+ 
+                <md-card-content class="ng-hide section" ng-show="ctrl.$showOnline" aria-hidden="true">
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showOnline1 = !ctrl.$showOnline1">
+                            <md-card-title-text>
+                                <h3 class="md-headline">Ressources en ligne</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showOnline1}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showOnline1"  aria-hidden="true">
+                            <p>Lors d'une recherche, l'ensemble des ressources propos&eacute;es par les biblioth&egrave;ques participantes sont index&eacute;es: livres, p&eacute;riodiques, bases de donn&eacute;es, photos num&eacute;ris&eacute;es, cartes, manuscrits et autres objets. Toutefois, tous les documents ne sont pas en libre acc&egrave;s. De nombreux documents n&eacute;cessitent une licence et ne sont disponibles que dans le r&eacute;seau de l'Universit&eacute; qui poss&egrave;de la licence. 	 l'aide de filtres, vous pouvez restreindre la recherche aux documents sous licence et en libre-acc&egrave;s (Online) ou s&eacute;lectionner uniquement les documents en libre acc&egrave;s (Online - Open Access).</p>
+                            <img width="233" src="custom/{{view}}/img/help/showonly_fre.png" />
+                            <p>
+                                Pour les ressources en ligne, la section &laquo;Consulter en ligne&raquo; dans l'affichage complet donne des informations sur la disponibilit&eacute; de la ressource dans votre institution et dans d'autres IZ du r&eacute;seau de SLSP. Pour acc&eacute;der &agrave; la ressource, cliquez sur l'ic&ocirc;ne <img width="41" src="custom/{{view}}/img/help/viewOnlineIcon.png" />
+                            </p>
+                            <img width="935" src="custom/{{view}}/img/help/viewOnline_fre.png" />
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showOnline2 = !ctrl.$showOnline2">
+                            <md-card-title-text>
+                                <h3 class="md-headline">Ressources en ligne pour les membres des Universit&eacute;s</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showOnline2}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showOnline2"  aria-hidden="true">
+                            <p>Outre les documents en libre-acc&egrave;s (Open Access), vous pouvez utiliser les services en ligne de votre Universit&eacute;. Les p&eacute;riodiques &eacute;lectroniques, e-books et bases de donn&eacute;es sont acquises via des licences et l'acc&egrave;s est limit&eacute; exclusivement au r&eacute;seau de l'institution licenci&eacute;e licences (sur le campus). En dehors de l'Universit&eacute;, vous pouvez utiliser un acc&egrave;s VPN, Eduroam, EZProxy, etc. pour acc&eacute;der &agrave; ces documents. Veuillez consulter le site du service informatique de votre biblioth&egrave;que ou Universit&eacute; pour obtenir plus d'informations sur l'acc&egrave;s &agrave; distance.</p>
+                            <p>
+                                La section &laquo;Consulter en ligne&raquo; indique les services disponibles pour les ressources dans votre institution et dans d'autres zones institutionnelles du r&eacute;seau de SLSP. Cliquez sur &laquo;Disponible en ligne&raquo; et sur l'ic&ocirc;ne <img width="41" src="custom/{{view}}/img/help/viewOnlineIcon.png" />pour obtenir l'affichage complet.
+                            </p>
+                            <img width="935" src="custom/{{view}}/img/help/availOnline_fre.png" />
+                            <img width="935" src="custom/{{view}}/img/help/availOnlineFull_fre.png" />
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showOnline3 = !ctrl.$showOnline3">
+                            <md-card-title-text>
+                                <h3 class="md-headline">Ressources en ligne pour les personnes qui ne sont pas membres d'une Universit&eacute;</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showOnline3}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showOnline3"  aria-hidden="true">
+                            <p>Outre les ressources en libre acc&egrave;s (Open Access) et les ressources en ligne sous licence nationale, vous pouvez utiliser les ressources sous licence des Universit&eacute;s &agrave; condition d'&ecirc;tre dans leurs locaux.</p>
+                            <p>Les p&eacute;riodiques &eacute;lectroniques, e-books et bases de donn&eacute;es universitaires sont acquises via des licences et l'acc&egrave;s est limit&eacute; exclusivement au r&eacute;seau de l'institution licenci&eacute;e (sur le campus). Vous pouvez ainsi t&eacute;l&eacute;charger et/ou avoir acc&egrave;s aux ressources dans les locaux de la biblioth&egrave;que.</p>
+                            <p>Les biblioth&egrave;ques donnant acc&egrave;s &agrave; une ressource en ligne sont affich&eacute;es dans localisations:</p>
+                            <img width="935" src="custom/{{view}}/img/help/availOnline2_fre.png" />
+                            <img width="935" src="custom/{{view}}/img/help/locationItems_fre.png" />
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showOnline4 = !ctrl.$showOnline4">
+                            <md-card-title-text>
+                                <h3 class="md-headline">Open Access</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showOnline4}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showOnline4"  aria-hidden="true">
+                            <p>Les documents &laquo; Open Access &raquo; sont libres d'acc&egrave;s. Il s'agit d'une part d'articles de p&eacute;riodiques ou d'e-books sur diff&eacute;rentes plateformes ou dans des r&eacute;pertoires institutionnels, et d'autre part de documents num&eacute;ris&eacute;s des biblioth&egrave;ques. Ces documents sont indiqu&eacute;s dans la liste de r&eacute;sultats avec une ic&ocirc;ne &laquo; open access &raquo;.</p>
+                            <img width="935" height="188"  src="custom/{{view}}/img/help/openAccess_fre.png" />
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showOnline5 = !ctrl.$showOnline5">Licences nationales</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showOnline5}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showOnline5"  aria-hidden="true">
+                            <p>Toute personne r&eacute;sidant en Suisse a acc&egrave;s aux licences nationales. Cela requiert un enregistrement unique gratuit; vous trouvez plus d'informations sur <a href="https://consortium.ch/zugriff/?lang=en" target="_blank">https://consortium.ch/zugriff/?lang=en </a>. Veuillez noter que pour l'enregistrement destin&eacute; &agrave; l'acc&egrave;s aux licences nationales, il est possible d'utiliser le m&ecirc;me edu-ID que pour swisscovery. Les ressources disponibles sous licences nationales sont indiqu&eacute;es entre parenth&egrave;ses dans la section &laquo;Disponibilit&eacute; du texte int&eacute;gral&raquo;.</p>
+                            <img width="935" height="160"  src="custom/{{view}}/img/help/NationalLicenses_fre.png" />
+                        </md-card-content>
+                    </md-card>
+                </md-card-content>
+            </md-card>
+
+            <md-card class="default-card" id="borrow">
+                <md-card-title class="collapsible" ng-click="ctrl.$showBorrow = !ctrl.$showBorrow">
+                    <md-card-title-text>
+                        <h2 class="md-headline">Emprunter/demander des documents</h2>
+                    </md-card-title-text>
+                    <md-icon ng-class="{'toggled' : ctrl.$showBorrow}">
+                        <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                        </svg>
+                    </md-icon>
+                </md-card-title>
+                <md-card-content id="bor1" class="ng-hide section" ng-show="ctrl.$showBorrow" aria-hidden="true">
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showBorrow1 = !ctrl.$showBorrow1">Emprunter/demander des documents</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showBorrow1}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showBorrow1"  aria-hidden="true">
+                            <p>Sous &laquo;Obtenir&raquo; dans l'affichage complet, vous pouvez voir les biblioth&egrave;ques o&ugrave; se trouve le document et s'il est disponible. La livraison d'un exemplaire vers une biblioth&egrave;que de retrait peut &ecirc;tre payante.</p>
+                        <p>Sous &laquo;Autres options&raquo; , vous pouvez voir si des biblioth&egrave;ques d'autres zones institutionnelles SLSP poss&egrave;dent &eacute;galement cet exemplaire.</p>
+                        <img width="935" src="custom/{{view}}/img/help/getIt_fre.png" />
+                        <p>S&eacute;lectionnez l'option de demande que vous souhaitez: Demander (exemplaire physique/r&eacute;servation) ou Num&eacute;risation (exemplaire &eacute;lectronique ou papier). Vous devez &ecirc;tre connect&eacute;(e) pour effectuer une demande.</p>
+                        <img width="935" src="custom/{{view}}/img/help/requestOption_fre.png" />
+                        <p>Si vous s&eacute;lectionnez Demander, vous pouvez demander un exemplaire physique &agrave; retirer dans une biblioth&egrave;que. Vous pouvez &eacute;galement demander certains exemplaires via le service d'acc&egrave;s par navette (service payant). Si cette option est propos&eacute;e, vous pouvez l'utiliser en s&eacute;lectionnant votre institution dans le champ &laquo;institution de retrait&raquo; et l'adresse de votre domicile dans le champ &laquo;lieu de retrait&raquo;.</p>
+                        <p>Si vous souhaitez obtenir un exemplaire &eacute;lectronique ou papier d'un article ou d'un chapitre, cliquez sur Num&eacute;risation et remplissez le formulaire avec autant d'informations que possible.</p>
+                        <p><strong>Note:</strong>Ces services ne sont pas n&eacute;cessairement disponibles dans votre IZ / biblioth&egrave;que et peuvent &ecirc;tre payants. Pour plus d'informations, <a href="https://slsp.ch/en" target="_blank">cliquez ici</a>.</p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showBorrow2 = !ctrl.$showBorrow2">Demandes de pr&ecirc;t entre biblioth&egrave;ques</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showBorrow2}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showBorrow2"  aria-hidden="true">
+                            <p>En d&eacute;pit du fait que le r&eacute;seau SLSP donne acc&egrave;s &agrave; plus de 50 millions d'exemplaires ainsi qu'&agrave; un nombre incalculable de ressources &eacute;lectroniques, il est possible que la publication que vous recherchez ne soit pas disponible. Dans ce cas, vous pouvez faire une demande de pr&ecirc;t entre biblioth&egrave;ques, et le document sera emprunt&eacute; &agrave; une autre biblioth&egrave;que en Suisse ou &agrave; l'&eacute;tranger (service payant). Nous vous invitons &agrave; remplir ce <a href="https://slsp.ch/en" target="_blank">formulaire</a>, votre biblioth&egrave;que s'occupera ensuite de votre demande.</p>
+                            <p><strong>Note:</strong> Ce service peut faire l'objet de frais suppl&eacute;mentaires. Pour obtenir plus d'informations sur les frais &eacute;ventuels, <a href="https://slsp.ch/en" target="_blank">consultez cette page</a>.</p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showBorrow3 = !ctrl.$showBorrow3">Prolonger les p&eacute;riodes de pr&ecirc;t</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showBorrow3}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showBorrow3"  aria-hidden="true">
+                            <p>Dans Mon compte, vous pouvez voir vos pr&ecirc;ts en cours et les renouveler tous ou individuellement sous r&eacute;serve que les conditions du pr&ecirc;t le permettent.</p>
+                            <img width="935" src="custom/{{view}}/img/help/renewLoans_fre.png" />
+                            <p><strong>Note:</strong> les conditions de pr&ecirc;t peuvent varier en fonction des institutions et du type de mat&eacute;riel.</p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showBorrow4 = !ctrl.$showBorrow4">Historique des pr&ecirc;ts pass&eacute;s</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showBorrow4}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showBorrow4"  aria-hidden="true">
+                            <p>Dans Mon compte, dans la section &laquo;Pr&ecirc;ts&raquo; des IZ, vous pouvez voir vos pr&ecirc;ts en cours et pass&eacute;s.</p>
+                            <img width="352" src="custom/{{view}}/img/help/activeLoans_fre.png" />
+                            <p><strong>Note:</strong> dans certaines zones institutionnelles / biblioth&egrave;ques, cette option n'est pas disponible en raison de restrictions impos&eacute;es par la loi cantonale sur la protection de la vie priv&eacute;e. </p>
+                        </md-card-content>
+                    </md-card>
+                </md-card-content>
+            </md-card>
+
+            <md-card class="default-card" id="search">
+                <md-card-title class="collapsible" ng-click="ctrl.$showSearch = !ctrl.$showSearch">
+                    <md-card-title-text>
+                        <h2 class="md-headline">Rechercher</h2>
+                    </md-card-title-text>
+                    <md-icon ng-class="{'toggled' : ctrl.$showSearch}">
+                        <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                        </svg>
+                    </md-icon>
+                </md-card-title>
+                <md-card-content id="bor1" class="ng-hide section" ng-show="ctrl.$showSearch" aria-hidden="true">
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showSearch1 = !ctrl.$showSearch1">
+                            <md-card-title-text>
+                                <h3 class="md-headline">Profils de recherche de SLSP</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showSearch1}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showSearch1"  aria-hidden="true">
+                            <p>SLSP fonctionne avec deux profils de recherche standards disponibles dans toutes les vues. Le premier s'intitule &laquo; Toutes les biblioth&egrave;ques SLSP &raquo; et le second &laquo; Ma biblioth&egrave;que &raquo;. Ce sch&eacute;ma explique dans quelle zone est effectu&eacute;e votre recherche lorsque vous utilisez l'un ou l'autre. Dans certaines zones institutionnelles ou vues de biblioth&egrave;que, il est possible d'avoir des profils de recherche suppl&eacute;mentaires personnalis&eacute;s cr&eacute;&eacute;s par la zone institutionnelle / biblioth&egrave;que.</p>
+                            <img width="935" src="custom/{{view}}/img/help/infographig_fre.png" />
+                            <p><strong>Ma biblioth&egrave;que:</strong> Inclut l'inventaire local de la zone institutionnelle / biblioth&egrave;que + les sources de donn&eacute;es externes t&eacute;l&eacute;charg&eacute;es dans cette zone institutionnelles (sources de donn&eacute;es g&eacute;n&eacute;rales et sources de donn&eacute;es locales ou r&eacute;pertoires institutionnels) + le Central Discovery Index (le CDI peut &eacute;galement &ecirc;tre utilis&eacute; comme profil de recherche distinct). Ce profil de recherche porte toujours le nom de l'institution.</p>
+                            <p><strong>swisscovery:</strong> inclut l'ensemble des notices du r&eacute;seau SLSP + les sources de donn&eacute;es externes g&eacute;n&eacute;rales + le Central Discovery Index  </p>
+                            <p><strong>Profil de recherche personnalis&eacute;:</strong> certaines zones institutionnelles / biblioth&egrave;ques ont cr&eacute;&eacute; leurs propres profils de recherche, y compris des profils de recherche limit&eacute;s &agrave; des donn&eacute;es locales.</p>
+                            <p><strong>Central Discovery Index (CDI):</strong> est une base de donn&eacute;es centralis&eacute;e comportant des milliers de ressources pour un total de 3 milliards de notices telles que: articles de revues, e-books, th&egrave;ses, comptes rendus de conf&eacute;rences, brevets, rapports, documents gouvernementaux, images, vid&eacute;os, etc. Suivant la vue zone institutionnelle / biblioth&egrave;que, il est possible de chercher dans le CDI par le profil de recherche &laquo;Ma biblioth&egrave;que&raquo;, par un profil de recherche distinct ou par les deux profils </p>
+                            <p><strong>Ressources externes g&eacute;n&eacute;rales:</strong> swisscovery s'est vu dot&eacute; de ressources &eacute;lectroniques externes g&eacute;n&eacute;rales, en particulier de r&eacute;pertoires institutionnelles.</p>
+                            <p><strong>Ressources externes locales:</strong> outre les ressources externes g&eacute;n&eacute;rales, certaines zones institutionnelles proposent &eacute;galement des ressources externes locales.</p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showSearch2 = !ctrl.$showSearch2">Recherche simple</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showSearch2}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showSearch2"  aria-hidden="true">
+                            <p>La recherche simple permet d'acc&eacute;der rapidement aux ressources de la biblioth&egrave;que.</p>
+                            <img width="935" src="custom/{{view}}/img/help/simpleSearch_fre.png" />
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showSearch3 = !ctrl.$showSearch3">Recherche avanc&eacute;e</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showSearch3}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showSearch3"  aria-hidden="true">
+                            <p>Les champs de recherche de la recherche avanc&eacute;e peuvent &ecirc;tre combin&eacute;s avec ET, OU ou SAUF.</p>
+                            <img width="935" src="custom/{{view}}/img/help/advancedSearch_fre.png" />
+                            <p>Dans cet exemple, la recherche est limit&eacute;e aux livres en anglais qui contiennent &laquo;mountain railway&raquo; dans leur titre et qui ont pour sujet la Suisse.</p>
+                            <p>Avec l'aide du deuxi&egrave;me (ou troisi&egrave;me) champ, vous pouvez choisir entre &laquo;contient&raquo;, &laquo;est(exact)&raquo; ou &laquo;commence par&raquo; pour sp&eacute;cifier si les termes de la recherche doivent &ecirc;tre contenus dans le champ, si l'&eacute;l&eacute;ment doit correspondre exactement aux termes de la recherche ou s'il doit commencer par un terme sp&eacute;cifique.</p>
+                            <p>Ici vous pouvez mettre quelques mots du titre, pas n&eacute;cessairement dans l'ordre</p>
+                            <img width="408" src="custom/{{view}}/img/help/advancedField1_fre.png" /><br />
+                            <p>L&agrave;, vous recherchez ce titre exact</p>
+                            <img width="408" src="custom/{{view}}/img/help/advancedField2_fre.png" />
+                            <p>Et l&agrave;, vous recherchez des titres qui commencent par le mot &laquo; mountain &raquo;</p>
+                            <img width="408" src="custom/{{view}}/img/help/advancedField3_fre.png" />
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showSearch4 = !ctrl.$showSearch4">Rechercher une expression</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showSearch4}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showSearch4"  aria-hidden="true">
+                            <p>Si vous souhaitez rechercher une expression pr&eacute;cise (groupe de mots), mettez-la entre guillemets. Vous pouvez associer expressions et mots dans une recherche.</p>
+                            <img width="935" src="custom/{{view}}/img/help/searchPhrase_fre.png" />
+                            <p>Les r&eacute;sultats incluent des documents qui contiennent &agrave; la fois l'expression exacte &laquo;piz buin&raquo; et le sujet &laquo;mountain&raquo;.</p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showSearch5 = !ctrl.$showSearch5">Rechercher avec des caract&egrave;res g&eacute;n&eacute;riques</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showSearch5}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showSearch5"  aria-hidden="true">
+                            <p>L'ast&eacute;risque * et le point d'interrogation ? peuvent &ecirc;tre utilis&eacute;s comme caract&egrave;res g&eacute;n&eacute;riques (ou caract&egrave;res de remplacement) pour la recherche:</p>
+                            <p>L'ast&eacute;risque * sert &agrave; remplacer z&eacute;ro, un ou plusieurs caract&egrave;res: </p>
+                            <img width="935" src="custom/{{view}}/img/help/searchWildcard1_fre.png" />
+                            <p>Permet de rechercher culture, cultures, cultural etc. </p>
+                            <p>L'ast&eacute;risque * peut &eacute;galement aider &agrave; trouver diff&eacute;rentes orthographes: </p>
+                            <img width="935" src="custom/{{view}}/img/help/searchWildcard2_fre.png" />
+                            <p>Recherche yogurt, yoghurt, yogourt, yoghourt, etc.</p>
+                            <p>Le point d'interrogation ? est le caract&egrave;re de remplacement pour un seul caract&egrave;re: </p>
+                            <img width="935" src="custom/{{view}}/img/help/searchWildcard3_fre.png" />
+                            <p>Recherche &agrave; la fois woman et women.</p>
+                            <p>Vous pouvez &eacute;galement combiner ces deux caract&egrave;res: </p>
+                            <img width="935" src="custom/{{view}}/img/help/searchWildcard4_fre.png" />
+                            <p>Vous obtiendrez des r&eacute;sultats avec yoghurt, yogourt, yohurts ou yogourts</p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showSearch6 = !ctrl.$showSearch6">Utiliser les op&eacute;rateurs bool&eacute;ens pour &eacute;tendre ou restreindre une recherche</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showSearch6}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showSearch6"  aria-hidden="true">
+                            <p>Vous pouvez utiliser les op&eacute;rateurs bool&eacute;ens ET, OU et SAUF. Ils doivent &ecirc;tre &eacute;crits en majuscules. </p>
+                            <p>Sans indication sp&eacute;cifique, les termes de la recherche sont automatiquement associ&eacute;s avec <strong>ET</strong>. En d'autres termes, tous les termes de la recherche doivent appara&icirc;tre dans les r&eacute;sultats.</p>
+                            <p><strong>OU</strong></p>
+                            <p>Au moins l'un des termes de recherche reli&eacute; avec OU doit appara&icirc;tre dans les r&eacute;sultats. Par exemple, utilisez OU pour associer des termes li&eacute;s afin d'&eacute;tendre la recherche &agrave; plusieurs termes (synonymes, orthographes diff&eacute;rentes):</p>
+                            <img width="935" src="custom/{{view}}/img/help/searchOR_fre.png" />
+                            <p><strong>SAUF</strong></p>
+                            <p>Le terme de la recherche exclu avec SAUF ne doit pas appara&icirc;tre dans les r&eacute;sultats. Autrement dit, SAUF permet d'exclure explicitement des mots ou des expressions.</p>
+                            <!--<p><strong>NOTE:</strong> The Boolean operator NOT is available only in the simple search </p>-->
+                            <img width="935" src="custom/{{view}}/img/help/searchNOT_fre.png" />
+                            <p>Les r&eacute;sultats seront des documents qui contiennent l'expression &laquo;climate change&raquo;, mais pas &laquo;global warming&raquo;. </p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showSearch7 = !ctrl.$showSearch7">Mes favoris</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showSearch7}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showSearch7"  aria-hidden="true">
+                            <p>Dans &laquo;Mes Favoris&raquo;, vous pouvez enregistrer les titres que vous trouvez pendant votre recherche. Vous ne pouvez les enregistrer sur le long terme que si vous vous &ecirc;tes identifi&eacute;(e). En tant qu'invit&eacute;, le contenu des favoris n'est disponible que durant la session de navigation en cours. </p>
+                            <p>Si vous cliquez sur l'ic&ocirc;ne &eacute;pingle
+                            <img width="14" src="custom/{{view}}/img/help/pinIcon1.png" /> d'un titre, celui-ci est ajout&eacute; &agrave; vos favoris; l'ic&ocirc;ne &eacute;pingle se transforme alors en
+                            <img width="14" src="custom/{{view}}/img/help/pinIcon2.png" />. Si vous cliquez &agrave; nouveau sur
+                            <img width="14" src="custom/{{view}}/img/help/pinIcon2.png" />, le titre est retir&eacute; de vos favoris.
+                            </p>
+                            <p>Vous pouvez acc&eacute;der &agrave; votre liste de favoris via l'ic&ocirc;ne &eacute;pingle
+                            <img width="14" src="custom/{{view}}/img/help/pinIcon1.png" /> situ&eacute; en haut &agrave; droite de la page.
+                            </p>
+                            <p>Vous pouvez retirer ou exporter des titres individuels depuis votre liste de favoris. Surlignez un ou plusieurs titres et utilisez les symboles situ&eacute;s en haut de la page pour les retirer, ajouter des libell&eacute;s, les exporter vers des outils de gestion des r&eacute;f&eacute;rences, les imprimer ou les envoyer par e-mail: </p>
+                            <img width="935" src="custom/{{view}}/img/help/myFavorites_fre.png" />
+                            <p>Afin de voir les d&eacute;tails d'une notice, cliquez sur le titre en question. </p>
+                            <p>Vous trouvez &eacute;galement l'historique de recherche pour la session de navigation en cours dans &laquo;Mes favoris&raquo;. </p>
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showSearch8 = !ctrl.$showSearch8">Historique de recherche</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showSearch8}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showSearch8"  aria-hidden="true">
+                            <p>Les recherches de la session de navigation en cours sont enregistr&eacute;es dans vos favoris dans &laquo;Historique de recherche&raquo;.</p>
+                            <p>Vous pouvez y acc&eacute;der directement via l'ic&ocirc;ne
+                            <img width="30" src="custom/{{view}}/img/help/searchHistoryIcon.png" />situ&eacute; en haut &agrave; droite de la page.
+                            </p>
+                            <img width="470" src="custom/{{view}}/img/help/searchHistory_fre.png" />
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showSearch9 = !ctrl.$showSearch9">Enregistrer et g&eacute;rer les recherches</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showSearch9}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showSearch9"  aria-hidden="true">
+                            <p>Si vous vous êtes identifié (e), vous pouvez enregistrer vos recherches de manière permanente. Pour cela, cliquez sur «Enregistrer la requête» situé au-dessus de la liste de résultats: </p>
+                        <img src="custom/{{view}}/img/help/saveQuery_fre.png" width="935" height="148">
+                        <p><strong>NOTE:</strong> L'option «Enregistrer la requête» s'affiche uniquement si vous vous êtes identifié(e) et si vous avez lancé une recherche </p>
+                        <p>Lors de l'enregistrement de la requête, un message apparaît en haut de la page vous permettant de recevoir des notifications par e-mail lorsque la requête est mise à jour. Cliquez sur ce message pour activer les notifications.</p>
+                        <img src="custom/{{view}}/img/help/emailNotification_fre.png" width="935" height="73"><br>
+                        <img src="custom/{{view}}/img/help/emailNotificationSettings_fre.png" width="418" height="333">
+                        <p>Les recherches enregistrées sont conservées dans «Mes Favoris»<img src="custom/{{view}}/img/help/pinIcon1.png" width="14" height="18"> dans l'onglet «Recherches sauvegardées».</p>
+                        <img src="custom/{{view}}/img/help/savedSearches_fre.png" width="935" height="250">
+                        <p>Vous pouvez lancer à nouveau la même recherche en cliquant sur les termes de la requête. Vous pouvez configurer une notification (par RSS ou par e-mail) en utilisant les symboles situés à droite pour vous tenir informé(e) des derniers documents ajoutés qui correspondent à vos critères de recherche.</p>
+                        </md-card-content>
+                    </md-card>
+                </md-card-content>
+            </md-card>
+
+            <md-card class="default-card" id="display">
+                <md-card-title class="collapsible" ng-click="ctrl.$showDisplay = !ctrl.$showDisplay">
+                    <md-card-title-text>
+                        <h2 class="md-headline">Afficher les r&eacute;sultats</h2>
+                    </md-card-title-text>
+                    <md-icon ng-class="{'toggled' : ctrl.$showDisplay}">
+                        <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                        </svg>
+                    </md-icon>
+                </md-card-title>
+                <md-card-content id="bor1" class="ng-hide section" ng-show="ctrl.$showDisplay" aria-hidden="true">
+                    <md-card>
+                        <md-card-title class="collapsible" ng-click="ctrl.$showDsiplay1 = !ctrl.$showDsiplay1">
+                            <md-card-title-text>
+                                <h3 class="md-headline">R&eacute;duire le nombre de r&eacute;sultats</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showDsiplay1}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showDsiplay1"  aria-hidden="true">
+                            <p>Le filtre par termes est proposé dans la colonne de gauche, il vous permet de réduire le nombre de résultats dans votre recherche: </p>
+                        <img src="custom/{{view}}/img/help/facets1_fre.png" width="302" height="195">
+                        <p>Cliquer sur «Articles» réduit la liste de résultats aux articles trouvés. </p>
+                        <p>Afin d'exclure un terme, cliquez sur le symbole rouge situé à côté du terme sur la droite. </p>
+                        <img src="custom/{{view}}/img/help/facets2_fre.png" width="320" height="215">
+                        <p>«Voir plus» permet d'afficher des termes supplémentaires et d'affiner la recherche en incluant ou en excluant plusieurs termes. </p>
+                        <p>Exemple: Réduisez la recherche à «Articles de journal», «Comptes rendus» et «Livres».</p>
+                        <img src="custom/{{view}}/img/help/facets3_fre.png" width="349" height="506">
+                        <p>Pour supprimer un filtre, cliquez sur la croix X située à côté du terme. «Réinitialiser les filtres» permet de supprimer tous les filtres. </p>
+                        <img src="custom/{{view}}/img/help/filters1_fre.png" width="313" height="228">
+                        <p>La saisie d'une nouvelle recherche supprime automatiquement tous les filtres. Toutefois, vous pouvez conserver un filtre pendant toute la durée de la session de navigation en le sélectionnant puis en cliquant sur le symbole cadenas. Pour supprimer ce filtre, cliquez à nouveau sur le cadenas. </p>
+                        <img src="custom/{{view}}/img/help/filters2_fre.png" width="273" height="241">
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showDsiplay2 = !ctrl.$showDsiplay2">Liste de r&eacute;sultats: tri</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showDsiplay2}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showDsiplay2"  aria-hidden="true">
+                            <p>Par d&eacute;faut, les r&eacute;sultats sont tri&eacute;s par pertinence. Vous pouvez les trier par date, titre ou auteur. </p>
+                            <img width="177" src="custom/{{view}}/img/help/sorting_fre.png" />
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showDsiplay3 = !ctrl.$showDsiplay3">Liste de r&eacute;sultats: versions</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showDsiplay3}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showDsiplay3"  aria-hidden="true">
+                            <p>Si un travail est disponible en plusieurs versions (c'est-&agrave;-dire en plusieurs &eacute;ditions ou r&eacute;impressions), cliquez sur l'ic&ocirc;ne, le titre ou &laquo;Voir toute les versions&raquo; pour obtenir la liste de toutes les versions. </p>
+                            <img width="512" src="custom/{{view}}/img/help/versions_fre.png" />
+                            <p>Vous pouvez revenir &agrave; la liste des r&eacute;sultats en fermant la liste des versions dans &laquo;Filtres activ&eacute;s&raquo;. </p>
+                            <img width="263" src="custom/{{view}}/img/help/activeFilters_fre.png" />
+                        </md-card-content>
+                    </md-card>
+                    <md-card>
+                        <md-card-title class="collapsible">
+                            <md-card-title-text>
+                                <h3 class="md-headline" ng-click="ctrl.$showDsiplay4 = !ctrl.$showDsiplay4">Afficher des titres individuels</h3>
+                            </md-card-title-text>
+                            <md-icon ng-class="{'toggled' : ctrl.$showDsiplay4}">
+                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                    <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                                    <path d="M0 0h48v48h-48z" fill="none"></path>
+                                </svg>
+                            </md-icon>
+                        </md-card-title>
+                        <md-card-content class="ng-hide" ng-show="ctrl.$showDsiplay4"  aria-hidden="true">
+                            <p>Lorsque vous cliquez sur un titre, vous pouvez sélectionner les actions suivantes: </p>
+                            <img src="custom/{{view}}/img/help/fullViewNavigation_fre.png" width="144" height="274">
+                            <p><strong>Haut:</strong> revenir en haut de la page</p>
+                            <p><strong>Envoyer vers: </strong> eexporter les informations sur un titre vers un programme de gestion des références, exporter des citations, créer un lien permanent vers le résultat, imprimer ou envoyer par e-mail. Les actions d'exportation peuvent s'appliquer à un groupe comportant jusqu'à 50 notices. </p>
+                            <p><strong>Obtenir:</strong> afficher les localisations, faire des demandes de prêt, des réservations ou des copies.</p>
+                            <p><strong>Détails:</strong> informations détaillées sur le titre.</p>
+                            <p><strong>Liens:</strong> liens vers la table des matières, vers un titre antérieur/ultérieur, vers l'ensemble des volumes d'une série.</p>
+                            <p><strong>Étagère virtuelle:</strong> vous pouvez voir un rayon de la bibliothèque en lien avec la notice sélectionnée </p>
+                        </md-card-content>
+                    </md-card>
+                </md-card-content>
+            </md-card>
+
+            <md-card class="default-card" id="questions">
+                <md-card-title>
+                    <md-card-title-text>
+                        <h2 class="md-headline">Contact</h2>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content id="que1">
+                    <p><a href="mailto:bcu@fr.ch">bcu@fr.ch</a></p>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+</md-content>
