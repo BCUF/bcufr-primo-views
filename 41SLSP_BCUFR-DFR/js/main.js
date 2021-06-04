@@ -15,6 +15,7 @@ import {bcuHomeModule} from './modules/bcu-home/bcu-home.module';
 import {bcuHelpModule} from './modules/bcu-help/bcu-help.module';
 import {bcuNoSearchResultAfterModule} from './modules/prm-no-search-result-after/bcu-no-search-result-after.module';
 
+import {bcuPersonalInfoModule} from './modules/prm-personal-info-after/bcu-personal-info-after.module';
 //import {bcuUserAreaExpandableAfterModule} from './modules/prm-user-area-expandable-after/bcu-user-area-expandable-after.module';
 
 let app = angular.module('viewCustom', ['angularLoad']);
@@ -36,3 +37,6 @@ app.requires.push(bcuAlmaHowovpAfterModule.name);
 app.requires.push(bcuViewitAfterModule.name);
 //app.requires.push(bcuUserAreaExpandableAfterModule.name);
 app.requires.push(bcuNoSearchResultAfterModule.name);
+
+
+app.requires.push(bcuPersonalInfoModule.name);
