@@ -1,7 +1,24 @@
-<md-button ng-if="$ctrl.getPatronGrp()" class="md-button-confirm button-link" href="{{ $ctrl.detailsBaseEdu }}" target="_blank">
-    <prm-icon  class="rotate-20 margin-right-small" icon-type="svg" svg-icon-set="primo-ui" icon-definition="pencil"></prm-icon><span class="md-subhead" translate="customized.personal.details"></span>
-</md-button>
-<br>
-<md-button ng-if="$ctrl.getPatronGrp()" class="md-button-confirm button-link" href="{{ $ctrl.detailsBaseReg }}" target="_blank">
-    <prm-icon class="rotate-20 margin-right-small" icon-type="svg" svg-icon-set="primo-ui" icon-definition="account-card-details"></prm-icon><span class="md-subhead" translate="customized.libcard.number"></span>
-</md-button>
+<md-card ng-show="$ctrl.showA || $ctrl.showB">
+    <md-card-content>
+        <p>
+            <md-icon class="md-primoExplore-theme material-icons" role="img">
+                <svg class="md-secondary status-" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                    <path fill="currentColor" d="M 32,4 C 16.537113,4 4,16.541629 4,32 4,47.467403 16.537113,60 32,60 47.462887,60 60,47.467403 60,32 60,16.541629 47.462887,4 32,4 Z m 0,50.580646 C 19.52058,54.580646 9.4193545,44.483597 9.4193545,32 9.4193545,19.524758 19.521033,9.4193545 32,9.4193545 44.47479,9.4193545 54.580646,19.52092 54.580646,32 54.580646,44.479193 44.483597,54.580646 32,54.580646 Z m 0,-38.161292 c 2.618903,0 4.741936,2.123033 4.741936,4.741936 0,2.618903 -2.123033,4.741936 -4.741936,4.741936 -2.618903,0 -4.741936,-2.123033 -4.741936,-4.741936 0,-2.618903 2.123033,-4.741936 4.741936,-4.741936 z m 6.32258,28.67742 c 0,0.74821 -0.606628,1.354839 -1.354838,1.354839 h -9.935484 c -0.74821,0 -1.354838,-0.606629 -1.354838,-1.354839 v -2.709677 c 0,-0.74821 0.606628,-1.354839 1.354838,-1.354839 h 1.354839 v -7.225806 h -1.354839 c -0.74821,0 -1.354838,-0.606629 -1.354838,-1.354839 v -2.709677 c 0,-0.74821 0.606628,-1.354839 1.354838,-1.354839 h 7.225806 c 0.74821,0 1.354839,0.606629 1.354839,1.354839 v 11.290322 h 1.354839 c 0.748209,0 1.354838,0.606629 1.354838,1.354839 z"></path>
+                </svg>
+            </md-icon>
+            <span ng-show="$ctrl.showA" translate="customized.libraries.details"></span>
+            <span ng-if="$ctrl.showB" translate="customized.slsp.details"></span>
+        </p>
+    </md-card-content>
+</md-card>
+<div ng-show="$ctrl.showButtons">
+    <md-button class="md-button-confirm button-link" href="{{ $ctrl.detailsBaseEdu }}" target="_blank">
+        <prm-icon  class="rotate-20 margin-right-small" icon-type="svg" svg-icon-set="primo-ui" icon-definition="pencil"></prm-icon>
+        <span translate="customized.personal.details"></span>
+    </md-button>
+    <br>
+    <md-button class="md-button-confirm button-link" href="{{ $ctrl.detailsBaseReg }}" target="_blank">
+        <prm-icon class="rotate-20 margin-right-small" icon-type="svg" svg-icon-set="primo-ui" icon-definition="account-card-details"></prm-icon>
+        <span translate="customized.libcard.number"></span>
+    </md-button>
+</div>
