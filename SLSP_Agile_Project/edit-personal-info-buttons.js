@@ -1,7 +1,12 @@
-app.controller('EditPersonalDetailsController', [function () {
+app.controller('EditPersonalDetailsController', ['$scope', function ($scope) {
 
-    this.detailsBaseEdu = "https:\/\/eduid.ch";
-    this.detailsBaseReg = "https:\/\/registration.slsp.ch\/library-card\/";
+    let lang = 'en';
+    let sms = $scope.$root.$$childHead.$ctrl.userSessionManagerService;
+    if (sms) {
+        lang = sms.getInterfaceLanguage();
+    }
+    this.detailsBaseEdu = "https:\/\/eduid.ch\/web\/change-account-data\/2\/?lang=" + lang;
+    this.detailsBaseReg = "https:\/\/registration.slsp.ch\/library-card\/?lang=" + lang;
     this.grpA = ['11', '91', '92'];
     this.grpB = ['12', '13', '14', '15', '16'];
     this.showButtons = this.showA = this.showB = false;
