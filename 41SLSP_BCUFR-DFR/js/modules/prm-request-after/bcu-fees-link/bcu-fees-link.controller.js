@@ -14,23 +14,23 @@ export class bcuFeesLinkController {
       let form = false;
       let service = false;
       let index = 1;
-      if (this.form.children[1].children[1] !== undefined) {
-        if (this.form.children[1].children[1].children[0] !== undefined) {
-            form = this.form.children[1].children[1].children[0];
+      if (this.form.children[0].children[1] !== undefined) {
+        if (this.form.children[0].children[1].children[0] !== undefined) {
+            form = this.form.children[0].children[1].children[0];
         }
       }
-      else if (this.form.children[1].children[0] != undefined) {
-        form = this.form.children[1].children[0].children[0];
+      else if (this.form.children[0].children[0] !== undefined) {
+        form = this.form.children[0].children[0].children[0];
         let label = form.querySelector('prm-form-field:not(.hide) label[translate="almaResourceSharing.maximumFee"]');
         if (label) {
           label.parentNode.parentNode.parentNode.classList.add("hide");
         }
+        index = 2;
       }
       if (form) {
         if (this.afterCtrl.parentCtrl.formData) {
-          
           if (this.afterCtrl.parentCtrl.formData.requestType) {
-            service = "holding";
+            service = 'holding';
             index = 0;
             let pickUp = false;
             if (this.afterCtrl.parentCtrl.formData.pickupLocation || this.afterCtrl.parentCtrl.formData.pickupLocationFulNet) {
@@ -71,20 +71,15 @@ export class bcuFeesLinkController {
           
         }
         if (service != this.service) {
-          
-          if (form.children.length == 3) {
-            if (this.service == 'holding') {
-              form.children[0].remove();
-            }
-            else {
-              form.children[1].remove();
-            }
+          let infoBlock = document.getElementById('info-block');
+          if (infoBlock) {
+            infoBlock.remove();
           }
           this.service = service;
         }
-        else if (form.children.length == 2 && this.service) {
-          form.children[1].lastChild.firstChild.lastChild.innerHTML = form.children[1].lastChild.firstChild.lastChild.innerHTML.replace(/.\(.*\)/gi, '');
+        else if ((form.children.length == 2 && this.service && index < 2) || (form.children.length == 3 && index == 2)) {
           let info = document.createElement('DIV');
+          info.setAttribute("id", "info-block");
           info.className = "fees bar alert-bar " + service;
           info.innerHTML =
             `<h4>${this.bcuConfigService.getLabel(this.config, service)}</h4>

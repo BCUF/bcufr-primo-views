@@ -21,7 +21,7 @@ export class bcuHomeController {
 
     setOnCampus() {
         let $ctrl = this;
-        this.$http.get("XXX")
+        this.$http.get("https://www3.unifr.ch/apps/bcu/primo/status/index.php")
         .then(function(response) {
             $ctrl.onCampus = response.data.status;
           }, function(response) {
@@ -34,7 +34,7 @@ export class bcuHomeController {
     getNews() {
         this.news = [];
         let $ctrl = this;
-        let url = "XXX" + this.lang;
+        let url = "https://www3.unifr.ch/apps/bcu/primo/news/index.php?lang=" + this.lang;
         this.$http.get(url)
         .then(function(response) {
             let parser=new window.DOMParser();			
@@ -65,7 +65,7 @@ export class bcuHomeController {
         this.showClass[libraryClass] = ! this.showClass[libraryClass];
         if (this.libs[libraryClass].length == 0) {
             let $ctrl = this;
-            let url = "XXX" + this.appLang + "/list/?library_class=" + libraryClass;
+            let url = "https://svw-uo1061bcu.unifr.ch/bcu_api/libraries/" + this.appLang + "/list/?library_class=" + libraryClass;
             this.$http.get(url)
             .then(function(response) {
                 $ctrl.libs[libraryClass]=response.data.results;

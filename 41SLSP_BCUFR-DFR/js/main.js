@@ -3,7 +3,6 @@ import {bcuFullViewAfterModule} from './modules/prm-full-view-after/bcu-full-vie
 import {bcuFullViewServiceContainerAfterModule} from './modules/prm-full-view-service-container-after/bcu-full-view-service-container-after.module';
 import {bcuJournalIndicationLineModule} from './modules/prm-search-result-jounral-indication-line-after/bcu-journal-indication-line.module';
 import {bcuLocationItemsAfterModule} from './modules/prm-location-items-after/bcu-location-items-after.module';
-//import {bcuOtherMembersAfterModule} from './modules/prm-alma-other-members-after/bcu-other-members-after.module';
 import {bcuRequestAfterModule} from './modules/prm-request-after/bcu-request-after.module';
 import {bcuSearchBarAfterModule} from './modules/prm-search-bar-after/bcu-search-bar-after.module'
 import {bcuServiceButtonAfterModule} from './modules/prm-service-button-after/bcu-service-button-after.module';
@@ -16,7 +15,6 @@ import {bcuHelpModule} from './modules/bcu-help/bcu-help.module';
 import {bcuNoSearchResultAfterModule} from './modules/prm-no-search-result-after/bcu-no-search-result-after.module';
 
 import {bcuPersonalInfoModule} from './modules/prm-personal-info-after/bcu-personal-info-after.module';
-//import {bcuUserAreaExpandableAfterModule} from './modules/prm-user-area-expandable-after/bcu-user-area-expandable-after.module';
 
 let app = angular.module('viewCustom', ['angularLoad']);
  
@@ -26,7 +24,6 @@ app.requires.push(bcuFullViewServiceContainerAfterModule.name);
 app.requires.push(bcuJournalIndicationLineModule.name);
 app.requires.push(bcuLocationItemsAfterModule.name);
 app.requires.push(bcuRequestAfterModule.name);
-//app.requires.push(bcuOtherMembersAfterModule.name);
 app.requires.push(bcuSearchBarAfterModule.name);
 app.requires.push(bcuServiceButtonAfterModule.name);
 app.requires.push(bcuTopBarAfterModule.name);
@@ -35,8 +32,6 @@ app.requires.push(bcuHomeModule.name);
 app.requires.push(bcuHelpModule.name);
 app.requires.push(bcuAlmaHowovpAfterModule.name);
 app.requires.push(bcuViewitAfterModule.name);
-//app.requires.push(bcuUserAreaExpandableAfterModule.name);
 app.requires.push(bcuNoSearchResultAfterModule.name);
-
 
 app.requires.push(bcuPersonalInfoModule.name);

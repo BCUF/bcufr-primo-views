@@ -1137,9 +1137,12 @@ md-card.news.patrimoine md-list md-list-item:hover{
     background-color:rgba(0, 0, 0, 0.1);
 }
 
+.md-button:hover:not([disabled]) {
+    background-color: $lightgrey;
+}
+
 .md-button:hover:not([disabled]),
 .md-button:focus:not([disabled]) {
-    background-color: $lightgrey;
     color: #3a3a3a;
 }
 /*** user menu ***/
@@ -1409,8 +1412,11 @@ prm-search-bar .simple-search-wrapper .search-actions .md-button.button-confirm:
 
 .tiles-grid-tile .tile-content > .md-button,
 md-grid-tile .tile-content > .md-button,
-.bar prm-authentication .md-button.link-alt-color, .bar prm-authentication .section-title prm-icon.md-button,
-.is-gallery-view prm-gallery-item .collection-element .item-actions .md-button, .is-gallery-view prm-gallery-item .collection-element .item-actions button, .is-grid-view prm-gallery-item .collection-element .item-actions .md-button, .is-grid-view prm-gallery-item .collection-element .item-actions button, .md-button.button-as-link.link-alt-color, .section-title .bar prm-authentication prm-icon.md-button, .section-title prm-icon.md-button.button-as-link, prm-gallery-collection .collection-folder .item-actions .md-button, prm-gallery-collection .collection-folder .item-actions button,
+.bar prm-authentication .md-button.link-alt-color,
+.bar prm-authentication .section-title prm-icon.md-button,
+.is-gallery-view prm-gallery-item .collection-element .item-actions .md-button, .is-gallery-view prm-gallery-item .collection-element .item-actions button,
+.is-grid-view prm-gallery-item .collection-element .item-actions .md-button,
+.is-grid-view prm-gallery-item .collection-element .item-actions button, .md-button.button-as-link.link-alt-color, .section-title .bar prm-authentication prm-icon.md-button, .section-title prm-icon.md-button.button-as-link, prm-gallery-collection .collection-folder .item-actions .md-button, prm-gallery-collection .collection-folder .item-actions button,
 .multiselect-submit .multiselect-submit-inner .md-button.md-primary:focus, .multiselect-submit .multiselect-submit-inner .md-button.md-primary:hover,
 
 .advanced-search-wrapper .md-button.button-confirm:hover,

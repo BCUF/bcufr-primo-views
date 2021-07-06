@@ -31,16 +31,10 @@ export const bcuFeesLinkConfig = function(){
             it: 'Altri informazioni sulle tariffe'
         },
         linkUrl:{
-            de: 'https://www.fr.ch/de/kultur-und-tourismus/bibliotheken/einschreibung-ausleihe-und-andere-dienstleistungen-der-kantons-und-universitaetsbibliothek#slsp-kurier',
-            en: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
-            fr: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
-            it: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
-        },
-        slspUrl:{
-            de: 'https://www.fr.ch/de/kultur-und-tourismus/bibliotheken/einschreibung-ausleihe-und-andere-dienstleistungen-der-kantons-und-universitaetsbibliothek#slsp-kurier',
-            en: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
-            fr: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
-            it: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
+            de: 'https://www.fr.ch/de/kub/benutzungsordnung-und-gebuehren',
+            en: 'https://www.fr.ch/bcu/reglement-et-tarifs',
+            fr: 'https://www.fr.ch/bcu/reglement-et-tarifs',
+            it: 'https://www.fr.ch/bcu/reglement-et-tarifs',
         },
         intern: {
             de: 'Magazinbestellung: kostenlos',
@@ -48,23 +42,11 @@ export const bcuFeesLinkConfig = function(){
             fr: 'Commande en magasin&nbsp;: gratuit',
             it: 'Richesta di magazzino: gratis'
         },
-        internUrl:{
-            de: 'https://www.fr.ch/de/kultur-und-tourismus/bibliotheken/einschreibung-ausleihe-und-andere-dienstleistungen-der-kantons-und-universitaetsbibliothek#slsp-kurier',
-            en: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
-            fr: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
-            it: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
-        },
         home: {
             de: 'Preis: CHF 12.00 (Postversand)',
             en: 'Fees: CHF 12.00 (mail delivery)',
             fr: 'Prix&nbsp;: CHF 12.00 (envoi par poste)',
             it: 'Tariffe: CHF 12.00 (Consegna a domicilio'
-        },
-        homeUrl:{
-            de: 'https://www.fr.ch/de/kultur-und-tourismus/bibliotheken/einschreibung-ausleihe-und-andere-dienstleistungen-der-kantons-und-universitaetsbibliothek#slsp-kurier',
-            en: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
-            fr: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
-            it: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#navette',
         },
         copy: {
             de: 'Preis: CHF 5.00 (digital) / CHF 7.50 (gedruckt) pro 20 Seiten',
@@ -72,35 +54,17 @@ export const bcuFeesLinkConfig = function(){
             fr: 'Prix&nbsp;: CHF 5.00 (numérique) / CHF 7.50 (papier) par 20 pages',
             it: 'Tariffe: CHF 5.00 (digitale) / CHF 7.50 (cartaceo) per 20 pagine'
         },
-        copyUrl:{
-            de: 'https://www.fr.ch/de/kultur-und-tourismus/bibliotheken/einschreibung-ausleihe-und-andere-dienstleistungen-der-kantons-und-universitaetsbibliothek#kopien',
-            en: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#copies',
-            fr: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#copies',
-            it: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#copies',
-        },
         illBK: {
             de: 'Preis: ab CHF 12.00',
             en: 'Fees: from CHF 12.00',
             fr: 'Prix&nbsp;: dès CHF 12.00',
             it: 'Tariffe: da CHF 12.00'
         },
-        illBKUrl: {
-            de: 'https://www.fr.ch/de/kultur-und-tourismus/bibliotheken/einschreibung-ausleihe-und-andere-dienstleistungen-der-kantons-und-universitaetsbibliothek#fernleihe',
-            en: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#peb',
-            fr: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#peb',
-            it: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#peb',
-        },
         illCR: {
             de: 'Preis: ab CHF 5.00 pro 20 Seiten',
             en: 'Fee: from CHF 5.00 for 20 pages',
             fr: 'Prix&nbsp;: dès CHF 5.00 par 20 pages',
             it: 'Tariffe: da CHF 5.00 per 20 pagine'
-        },
-        illCRUrl: {
-            de: 'https://www.fr.ch/de/kultur-und-tourismus/bibliotheken/einschreibung-ausleihe-und-andere-dienstleistungen-der-kantons-und-universitaetsbibliothek#fernleihe',
-            en: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#peb',
-            fr: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#peb',
-            it: 'https://www.fr.ch/culture-et-tourisme/bibliotheques/inscription-pret-et-autres-prestations-a-la-bibliotheque-cantonale-et-universitaire#peb',
         }
     }
 }

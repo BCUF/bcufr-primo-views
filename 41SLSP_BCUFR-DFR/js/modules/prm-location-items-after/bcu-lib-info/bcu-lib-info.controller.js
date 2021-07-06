@@ -67,11 +67,11 @@ export class bcuLibInfoController {
                     lang = 'fr';
                 }
 
-                let url = "XXX" + lang + "/library_short/"+ this.libraryCode;
+                let url = "https://svw-uo1061bcu.unifr.ch/bcu_api/libraries/" + lang + "/library_short/"+ this.libraryCode;
                 this.$http.get(url)
                 .then(function(response) {
                     obj.library = response.data;
-                    let url = "XXX" + lang + "/current_openings/"+ obj.libraryCode;
+                    let url = "https://svw-uo1061bcu.unifr.ch/bcu_api/libraries/" + lang + "/current_openings/"+ obj.libraryCode;
                     obj.$http.get(url)
                     .then(function(response) {
                         obj.library.openings = response.data.slice(0,4);

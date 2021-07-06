@@ -31,9 +31,15 @@ prm-account-overview .main-institution-list md-list-item {
     border: 1px solid transparent;
 }
 
-prm-account-overview .institutions-list md-list-item.is-selected h3.institution-name {
+prm-account-overview .institutions-list md-list-item {
+    min-height: 0;
+    margin-bottom: 0.2em;
+}
+
+prm-account-overview .institutions-list md-list-item h3.institution-name {
     font-weight: normal;
     color: inherit;
+    line-height: 1;
 }
 
 prm-account-overview .institutions-list md-list-item.is-selected,
@@ -74,7 +80,8 @@ prm-account-overview .main-institution-list md-list-item prm-icon md-icon.md-pri
     width: 3em;
 }
 
-prm-account-overview .main-institution-list md-list-item:hover prm-icon md-icon.md-primoExplore-theme {
+prm-account-overview .main-institution-list md-list-item:hover prm-icon md-icon.md-primoExplore-theme,
+prm-loans-overview button.button-link.md-button.md-primoExplore-theme {
     color: white !important;
 }
 
@@ -88,4 +95,12 @@ prm-account-overview > md-content > md-tabs md-tabs-canvas md-tab-item {
 
 prm-requests .in-element-dialog form > div {
     background-color: white;
-} 
+}
+
+prm-requests,
+prm-personal-info,
+prm-loans,
+prm-fines,
+prm-messages-and-blocks {
+    min-width: 100% !important;
+}

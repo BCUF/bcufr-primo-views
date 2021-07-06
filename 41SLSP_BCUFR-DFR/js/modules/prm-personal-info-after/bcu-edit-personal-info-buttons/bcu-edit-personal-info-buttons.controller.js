@@ -5,6 +5,7 @@ export class bcuEditPersonalInfoButtonsController {
         this.detailsBaseReg = "https:\/\/registration.slsp.ch\/library-card\/?lang=" + lang;
         this.grpA = ['11', '91', '92'];
         this.grpB = ['12', '13', '14', '15', '16'];
+        this.noShow = ['STAFF', '99'];
         this.showButtons = this.showA = this.showB = false;
     }
 
@@ -17,7 +18,7 @@ export class bcuEditPersonalInfoButtonsController {
             else if (this.grpB.includes(patron)) {
                 this.showB = true;
             }
-            else {
+            else if (!this.noShow.includes(patron)) {
                 this.showButtons = true;
             }
         }

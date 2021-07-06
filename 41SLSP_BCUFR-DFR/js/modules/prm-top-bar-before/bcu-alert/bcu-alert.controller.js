@@ -12,7 +12,7 @@ export class bcuAlertController {
                 lang = 'fr';
             }
             let obj = this;
-            let url = "XXX" + lang + "/primo_alerts/BCU";
+            let url = "https://svw-uo1061bcu.unifr.ch/bcu_api/libraries/" + lang + "/primo_alerts/BCU";
             this.$http.get(url)
             .then(function(response) {
                 obj.alert = response.data;
