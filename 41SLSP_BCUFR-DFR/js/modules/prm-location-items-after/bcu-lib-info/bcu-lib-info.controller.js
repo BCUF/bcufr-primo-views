@@ -32,9 +32,10 @@ export class bcuLibInfoController {
                  this.afterCtrl.parentCtrl.$scope.$parent.$parent.$parent.$ctrl._locationServices.itemInfo.results[0][0].location.availabilityStatus == 'available') {
                  this.afterCtrl.parentCtrl.$scope.$parent.$parent.$parent.$ctrl._locationServices.itemInfo.results[0][0].items[0].itemFields[1] = this.bcuConfigService.getLabel(this.config, 'onSite');
             }
-            this.libraryCode = this.parentCtrl.loc.location.libraryCode.substring(5);
-            if(this.libraryCode == 'BLL') {
-                this.libraryCode = this.libraryCode + "-" + this.parentCtrl.loc.location.subLocation.substring(0,3);
+            this.libraryCode = this.parentCtrl.loc.location.libraryCode.slice(5);
+          
+            if(this.libraryCode.slice(0,3) == 'BLL') {
+                this.libraryCode = "BLL-" + this.parentCtrl.loc.location.subLocation.slice(0,3);
             }
             this.mainLocation = this.parentCtrl.loc.location.mainLocation;
             if (this.mainLocation == 'EMPTY') {
@@ -42,14 +43,14 @@ export class bcuLibInfoController {
             }
         }
         catch(e){
-            console.error("***BCUF*** ethLibraryInfoController.$doCheck:");
+            console.error("***BCUF*** bcuLibraryInfoController.$doCheck:");
             console.error(e.message);
         }
     }
 
     getInfo() {
         if (this.mainLocation.substr(0,3) != 'FR ') {
-            window.open("https://www.slsp.ch/libraries");
+            window.open("https://registration.slsp.ch/libraries/?library=" + this.parentCtrl.currLoc.location.libraryCode + "&lang=" + this.bcuConfigService.getLanguage());
         }
         else {
             let obj = this;
@@ -68,6 +69,7 @@ export class bcuLibInfoController {
                 }
 
                 let url = "https://svw-uo1061bcu.unifr.ch/bcu_api/libraries/" + lang + "/library_short/"+ this.libraryCode;
+                console.log(url);
                 this.$http.get(url)
                 .then(function(response) {
                     obj.library = response.data;
@@ -80,12 +82,14 @@ export class bcuLibInfoController {
                     }, function(response) {
                         console.error('***BCUFR*** libInfoOpenings');
                         console.error(response.statusText);
+                        console.error(url);
                         obj.library = false;
                     });
                     obj.oldLib = obj.libraryCode;
                 }, function(response) {
                     console.error('***BCUFR*** libInfoLibrary');
                     console.error(response.statusText);
+                    console.error(url);
                     obj.library = false;
                 });
             }

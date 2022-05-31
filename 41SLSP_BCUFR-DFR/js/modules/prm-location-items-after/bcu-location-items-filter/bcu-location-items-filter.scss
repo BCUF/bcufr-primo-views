@@ -1,0 +1,18 @@
+prm-locations-filter .md-button.button-as-link:hover:not([disabled]) { 
+    background-color: rgba(17, 17, 17, 0.10) !important;
+}
+prm-locations-filter md-select {
+    margin-top:1px;
+}
+prm-location-items prm-service-button .md-button.button-as-link {
+    padding:0 6px !important;
+    box-shadow:none;
+    line-height:28px;
+}
+.full-view-container {
+    overflow-y: hidden;
+    margin-bottom: 50px;
+}
+html#primoExploreRoot {
+    overflow-y: auto !important;
+}
